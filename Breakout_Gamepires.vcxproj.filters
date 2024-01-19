@@ -78,6 +78,9 @@
     <Filter Include="Resources\Sounds">
       <UniqueIdentifier>{3d6d630a-cab8-4304-bd2a-a41f6fe5934f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Audio">
+      <UniqueIdentifier>{b073ce33-f0ea-4bba-869d-7076fc695cf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Win.cpp">
@@ -194,7 +197,7 @@
       <Filter>Header Files\Collider</Filter>
     </ClInclude>
     <ClInclude Include="Header files\Audio.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
