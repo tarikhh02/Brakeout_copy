@@ -16,7 +16,7 @@ void Game::ProcessMovableObjects()
 	std::thread([](Game* game)
 		{
 			game->ProcessEachMovableObject(&game->ball, &game->ball.physicsVelocity, false);
-		}, this).detach();
+		}, this).join();
 		
 	canAccessFunction = true;
 }
