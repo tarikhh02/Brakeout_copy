@@ -6,7 +6,7 @@ void Game::ProcessBallCollisionsWithWalls()
 
 	if (collisionType == Collider::DIE_COLLISION)
 	{
-		float startSpeed = -0.5;
+		float startSpeed = -1;
 
 		player.livesNumber--;
 

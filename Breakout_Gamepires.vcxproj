@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DirectionModificationCalculator.cpp" />
     <ClCompile Include="Source files\Audio\AudioPlayer.cpp" />
     <ClCompile Include="Source files\Collider\CollisionHandler.cpp" />
     <ClCompile Include="Source files\Collider\WallCollisionHandler.cpp" />

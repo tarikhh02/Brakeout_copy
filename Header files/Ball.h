@@ -13,7 +13,7 @@ public:
 	Ball(){}
 	Ball(int width, int height, const char* texturePath) : ObjectBase(width, height, texturePath)
 	{
-		physicsVelocity = PhysicsVelocity(0, -1, 0.8);
+		physicsVelocity = PhysicsVelocity(0, -1, 750);
 	}
 	~Ball()
 	{

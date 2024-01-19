@@ -158,6 +158,9 @@
     <ClCompile Include="Source files\Audio\AudioPlayer.cpp">
       <Filter>Source Files\Audio</Filter>
     </ClCompile>
+    <ClCompile Include="DirectionModificationCalculator.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Ball.h">
