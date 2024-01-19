@@ -34,7 +34,7 @@ void Game::AdaptGameForNewScreenSize(HWND hWnd)
 					}
 				}
 			std::thread([](Renderer* renderer, BrickType* brick, Level* level, int x, int y, int* columnsInitialized, bool* canAccessFunction)
-			{
+				{
 					if (brick->id != '_')
 					{
 						if (x != 0 || y != 0)
@@ -42,10 +42,11 @@ void Game::AdaptGameForNewScreenSize(HWND hWnd)
 
 						renderer->DrawTexture(brick->xPos, brick->yPos, brick);
 					}
+
 					*columnsInitialized += 1;
-					if(*columnsInitialized == level->columnCount)
+					if(*columnsInitialized == level->columnCount * level->rowCount)
 						*canAccessFunction = true;
-			}, &renderer, (bricks + y * level.columnCount + x), &level, x, y, &columnsInitialized, &canAccessFunction).detach();
+				}, &renderer, (bricks + y * level.columnCount + x), &level, x, y, &columnsInitialized, &canAccessFunction).detach();
 		}
 	}
 }

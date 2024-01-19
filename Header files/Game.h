@@ -11,7 +11,7 @@ class Game
 public:
 	bool canAccessFunction = true;
 
-	bool isGameRunning = true;
+	bool isGameRunning = false;
 	bool isInitializationFinished = false;
 	int columnsInitialized = -1;
 	int columnsToDestroy;

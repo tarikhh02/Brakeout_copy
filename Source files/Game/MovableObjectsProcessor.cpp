@@ -3,7 +3,7 @@
 
 void Game::ProcessMovableObjects()
 {
-	if (!canAccessFunction || columnsInitialized < level.columnCount)
+	if (!canAccessFunction || !isGameRunning)
 		return;
 
 	canAccessFunction = false;
