@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Renderer">
+      <UniqueIdentifier>{ac243370-fa86-4525-9d8d-57b5b25bd480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Renderer">
+      <UniqueIdentifier>{6450ee9a-0b33-47b2-a926-a6061b0892da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Level">
+      <UniqueIdentifier>{296b4bf1-44bf-42d9-997c-561b91caf6c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\STB_IMAGE">
+      <UniqueIdentifier>{9e4503e6-9b61-47d9-99e2-3959c76dac89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{850c2219-2a18-453d-b764-f79fef9d17f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BrickType">
+      <UniqueIdentifier>{91bd1b89-da17-4fb3-abd7-1a1f66db344b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ObjectBase">
+      <UniqueIdentifier>{9c03c928-87f7-476b-b80f-09e0ae65886c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{334379e5-a148-445c-b3f8-b19ddac46f3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{92ee1451-3075-4b5f-b6fa-edbeae59e314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{6c72d825-2c93-4db0-b741-4bacb45f3f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PhysicsVelocity">
+      <UniqueIdentifier>{a9cfea8b-6bbc-477d-97c5-e5b6f92bf8d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicsVelocity">
+      <UniqueIdentifier>{f7f651ba-71fd-46a4-adc3-0d79bde4f393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ball">
+      <UniqueIdentifier>{dfdd542f-df3f-4ceb-ab77-420cc52099d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{14d193f3-ee20-44c1-b4c2-39e1eaaf84d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{3a776e4d-e7b3-4e17-9d2b-82bac90a4e95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{d86d7afe-b510-4290-8fd9-29f59707ceb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{97451f6b-c26b-4303-97ff-2f97f346eb04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Images">
+      <UniqueIdentifier>{c09ba955-8f0f-4a1f-861c-33cc783b2b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collider">
+      <UniqueIdentifier>{260772c0-830a-414d-a6c1-bb304195e509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collider">
+      <UniqueIdentifier>{ff9dc11e-f6ea-4ad9-bed2-81e299f2c074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectBase">
+      <UniqueIdentifier>{10243b30-9772-45ad-9ae7-3e2b669af1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Audio">
+      <UniqueIdentifier>{41a92d51-9705-4032-ad0c-1b337136f3de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sounds">
+      <UniqueIdentifier>{3d6d630a-cab8-4304-bd2a-a41f6fe5934f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\MovableObjectsProcessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\NewGameScreenSizeAdapter.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\ObjectsInitializer.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Input\InputProcessor.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\ObjectBase\ObjectPositionSetter.cpp">
+      <Filter>Source Files\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\ObjectBase\TextureDecoder.cpp">
+      <Filter>Source Files\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\ObjectBase\WidthAndHeightSetter.cpp">
+      <Filter>Source Files\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Physics\ObjectMover.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocity.cpp">
+      <Filter>Source Files\PhysicsVelocity</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Renderer\TextureDrawer.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Renderer\TextureFromLastPositionResetter.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Collider\CollisionHandler.cpp">
+      <Filter>Source Files\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Physics\CornerDirectionAfterCollisionSetter.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Physics\OppositeAndgleDirectionCalculator.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Physics\BasicContactDirectionCalculator.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\BricksBallCollisionsProcessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\PlayerBallCollisionsProcessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\EachOfTheMovableObjectsProccessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\CollisionProcessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Collider\WallCollisionHandler.cpp">
+      <Filter>Source Files\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Game\WallBallCollisionProcessor.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Audio\AudioPlayer.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header files\Ball.h">
+      <Filter>Header Files\Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\BrickType.h">
+      <Filter>Header Files\BrickType</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Game.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Input.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Level.h">
+      <Filter>Header Files\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\ObjectBase.h">
+      <Filter>Header Files\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Physics.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\PhysicsVelocity.h">
+      <Filter>Header Files\PhysicsVelocity</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Player.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Renderer.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\stb_image.h">
+      <Filter>Header Files\STB_IMAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Collider.h">
+      <Filter>Header Files\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\Audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\softBrickTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\backgroundTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\ballTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\hardBrickTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\impenetrableBrickTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\mediumBrickTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+    <Image Include="Resources\Images\playerTexture.jpg">
+      <Filter>Resources\Images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\Sounds\hardBrickBreakingSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\softBrickHitSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\mediumBrickHitSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\hardBrickHitSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\impenetrableBrickHitSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\softBrickBreakingSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+    <Media Include="Resources\Sounds\mediumBrickBreakingSound.wav">
+      <Filter>Resources\Sounds</Filter>
+    </Media>
+  </ItemGroup>
+</Project>

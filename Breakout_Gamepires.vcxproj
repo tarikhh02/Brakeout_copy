@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9c4fe6f9-3e0e-4ae8-8491-63a4ea60a48a}</ProjectGuid>
+    <RootNamespace>MyFirstCPPGame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Breakout</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Header files</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Header files</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Header files</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Header files</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source files\Audio\AudioPlayer.cpp" />
+    <ClCompile Include="Source files\Collider\CollisionHandler.cpp" />
+    <ClCompile Include="Source files\Collider\WallCollisionHandler.cpp" />
+    <ClCompile Include="Source files\Game\BricksBallCollisionsProcessor.cpp" />
+    <ClCompile Include="Source files\Game\CollisionProcessor.cpp" />
+    <ClCompile Include="Source files\Game\EachOfTheMovableObjectsProccessor.cpp" />
+    <ClCompile Include="Source files\Game\MovableObjectsProcessor.cpp" />
+    <ClCompile Include="Source files\Game\NewGameScreenSizeAdapter.cpp" />
+    <ClCompile Include="Source files\Game\ObjectsInitializer.cpp" />
+    <ClCompile Include="Source files\Game\PlayerBallCollisionsProcessor.cpp" />
+    <ClCompile Include="Source files\Game\WallBallCollisionProcessor.cpp" />
+    <ClCompile Include="Source files\Input\InputProcessor.cpp" />
+    <ClCompile Include="Source files\ObjectBase\ObjectPositionSetter.cpp" />
+    <ClCompile Include="Source files\ObjectBase\TextureDecoder.cpp" />
+    <ClCompile Include="Source files\ObjectBase\WidthAndHeightSetter.cpp" />
+    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocity.cpp" />
+    <ClCompile Include="Source files\Physics\BasicContactDirectionCalculator.cpp" />
+    <ClCompile Include="Source files\Physics\CornerDirectionAfterCollisionSetter.cpp" />
+    <ClCompile Include="Source files\Physics\OppositeAndgleDirectionCalculator.cpp" />
+    <ClCompile Include="Source files\Physics\ObjectMover.cpp" />
+    <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp" />
+    <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp" />
+    <ClCompile Include="Source files\Renderer\TextureDrawer.cpp" />
+    <ClCompile Include="Source files\Renderer\TextureFromLastPositionResetter.cpp" />
+    <ClCompile Include="Win.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header files\Audio.h" />
+    <ClInclude Include="Header files\Ball.h" />
+    <ClInclude Include="Header files\BrickType.h" />
+    <ClInclude Include="Header files\Collider.h" />
+    <ClInclude Include="Header files\Game.h" />
+    <ClInclude Include="Header files\Input.h" />
+    <ClInclude Include="Header files\Level.h" />
+    <ClInclude Include="Header files\ObjectBase.h" />
+    <ClInclude Include="Header files\Physics.h" />
+    <ClInclude Include="Header files\PhysicsVelocity.h" />
+    <ClInclude Include="Header files\Player.h" />
+    <ClInclude Include="Header files\Renderer.h" />
+    <ClInclude Include="Header files\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\backgroundTexture.jpg" />
+    <Image Include="Resources\Images\ballTexture.jpg" />
+    <Image Include="Resources\Images\hardBrickTexture.jpg" />
+    <Image Include="Resources\Images\impenetrableBrickTexture.jpg" />
+    <Image Include="Resources\Images\mediumBrickTexture.jpg" />
+    <Image Include="Resources\Images\playerTexture.jpg" />
+    <Image Include="Resources\Images\softBrickTexture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\Sounds\hardBrickBreakingSound.wav" />
+    <Media Include="Resources\Sounds\hardBrickHitSound.wav" />
+    <Media Include="Resources\Sounds\impenetrableBrickHitSound.wav" />
+    <Media Include="Resources\Sounds\mediumBrickBreakingSound.wav" />
+    <Media Include="Resources\Sounds\mediumBrickHitSound.wav" />
+    <Media Include="Resources\Sounds\softBrickBreakingSound.wav" />
+    <Media Include="Resources\Sounds\softBrickHitSound.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
