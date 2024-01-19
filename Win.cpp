@@ -60,7 +60,11 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 	while (game.isGameRunning)
 	{
-		std::chrono::high_resolution_clock::time_point startTime = std::chrono::high_resolution_clock::now();
+		LARGE_INTEGER frequency, startTime, endTime;
+
+		QueryPerformanceFrequency(&frequency);
+
+		QueryPerformanceCounter(&startTime);
 
 		MSG message;
 		while (PeekMessage(&message, window, 0, 0, PM_REMOVE))
@@ -77,9 +81,11 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 		//Render the game
 		std::thread([&hdc]() { StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY); }).join();
 
-		std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
+		QueryPerformanceCounter(&endTime);
 
-		game.deltaTime = std::chrono::duration<float>(endTime - startTime).count();
+		float dtTemp = (float)(endTime.QuadPart - startTime.QuadPart) / frequency.QuadPart;
+
+		game.deltaTime = dtTemp;
 	}
 
 	Sleep(2000);
