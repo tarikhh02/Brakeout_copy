@@ -13,10 +13,7 @@ void Game::ProcessMovableObjects()
 			game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true);
 		}, this).detach();
 			
-	std::thread([](Game* game)
-		{
-			game->ProcessEachMovableObject(&game->ball, &game->ball.physicsVelocity, false);
-		}, this).join();
+	ProcessEachMovableObject(&ball, &ball.physicsVelocity, false);
 		
 	canAccessFunction = true;
 }
