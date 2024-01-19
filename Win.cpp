@@ -52,7 +52,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	RegisterClass(&windowClass);
 
 	//Create window
-	HWND window = CreateWindow(windowClass.lpszClassName, L"My first game", WS_OVERLAPPEDWINDOW | WS_MAXIMIZE | WS_MAXIMIZEBOX | WS_VISIBLE, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), 0, 0, hInstance, 0);
+	HWND window = CreateWindow(windowClass.lpszClassName, L"Brakeout Copy", WS_OVERLAPPEDWINDOW | WS_MAXIMIZE | WS_MAXIMIZEBOX | WS_VISIBLE, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), 0, 0, hInstance, 0);
 
 	HDC hdc = GetDC(window);
 
