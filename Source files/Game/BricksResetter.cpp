@@ -8,6 +8,7 @@ void Game::ResetBricks()
 		{
 			renderer.DrawTexture(bricks[i].xPos, bricks[i].yPos, (bricks + i));
 			bricks[i].isDestroyed = false;
+			bricks[i].hitPoints = 2;
 			bricksToDestroy++;
 		}
 	}
