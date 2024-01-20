@@ -14,14 +14,14 @@ void Game::InitializeObjects()
 	{
 		for (int x = 0; x < level.columnCount; x++)
 		{
-			bricks[y * level.columnCount + x] = BrickType('H', 100, 20, 3, "Resources\\Images\\softBrickTexture.jpg", "Resources\\Sounds\\softBrickHitSound.wav", "Resources\\Sounds\\softBrickBreakingSound.wav");
+			bricks[y * level.columnCount + x] = BrickType('H', 100, 20, 2, "Resources\\Images\\softBrickTexture.jpg", "Resources\\Sounds\\softBrickHitSound.wav", "Resources\\Sounds\\softBrickBreakingSound.wav");
 		}
 	}
 
 	player = Player(150, 20, "Resources\\Images\\playerTexture.jpg");
 	ball = Ball(12, 12, "Resources\\Images\\ballTexture.jpg");
 
-	columnsToDestroy = level.columnCount * level.rowCount;
+	bricksToDestroy = level.columnCount * level.rowCount;
 
 	isInitializationFinished = true;
 	canAccessFunction = true;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Player.h"
+#include "Game.h"
 
 class Input
 {
@@ -9,5 +9,5 @@ public:
 	static bool isDown;
 
 public:
-	static void ProcessInput(Player* player);
+	static void ProcessInput(Game* game);
 };

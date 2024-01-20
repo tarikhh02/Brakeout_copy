@@ -10,11 +10,11 @@ class Game
 {
 public:
 	bool canAccessFunction = true;
-
-	bool isGameRunning = false;
+	bool isGameFinished = true;
+	bool isGameRunning = true;
 	bool isInitializationFinished = false;
 	int columnsInitialized = -1;
-	int columnsToDestroy;
+	int bricksToDestroy;
 
 	Renderer renderer;
 	float deltaTime = 0;
@@ -35,7 +35,11 @@ public:
 	virtual void ProcessMovableObjects();
 	virtual bool ProcessBallCollisionsWithBricks();
 	virtual bool ProcessBallCollisionsWithPlayer();
-	virtual void ProcessBallCollisionsWithWalls();
+	virtual bool ProcessBallCollisionsWithWalls();
+	virtual void FinishGame(const char* finishResult);
+	virtual void ResetBallAndPlayer();
+	virtual void ResetBricks();
+	virtual void StartGame();
 
 private:
 	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer);

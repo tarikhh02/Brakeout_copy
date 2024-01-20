@@ -27,8 +27,10 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	
 	else if (uMsg == WM_CREATE)
 	{
-		//Instantiate objects for the game
-		std::thread([]() { game.InitializeObjects(); }).detach();
+		//Initialize objects for the game
+		std::thread([hWnd]() { game.InitializeObjects(); }).detach();
+
+		//load main menu screen
 	}
 
 	else if (uMsg == WM_KEYDOWN || uMsg == WM_KEYUP)
@@ -52,7 +54,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	RegisterClass(&windowClass);
 
 	//Create window
-	HWND window = CreateWindow(windowClass.lpszClassName, L"Brakeout Copy", WS_OVERLAPPEDWINDOW | WS_MAXIMIZE | WS_MAXIMIZEBOX | WS_VISIBLE, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), 0, 0, hInstance, 0);
+	HWND window = CreateWindow(windowClass.lpszClassName, L"Brakeout Copy", WS_OVERLAPPEDWINDOW | WS_MAXIMIZE | WS_VISIBLE, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), 0, 0, hInstance, 0);
 
 	HDC hdc = GetDC(window);
 
@@ -68,21 +70,26 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 		QueryPerformanceCounter(&startTime);
 
+		void* bufferToRender;
+
 		MSG message;
 		while (PeekMessage(&message, window, 0, 0, PM_REMOVE))
 		{
 			TranslateMessage(&message);
 			DispatchMessage(&message);
 		}
+
 		//Gather input
-		Input::ProcessInput(&game.player);
+		Input::ProcessInput(&game);
 
 		//Simulate game
 		game.ProcessMovableObjects();
 
-		//Render the game
-		std::thread([&hdc]() { StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY); }).join();
+		bufferToRender = game.renderer.bufferMemory;
 
+		//Render the game
+		StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY);
+		
 		QueryPerformanceCounter(&endTime);
 
 		game.deltaTime = (float)(endTime.QuadPart - startTime.QuadPart) / frequency.QuadPart;

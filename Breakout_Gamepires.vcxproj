@@ -136,11 +136,15 @@
     <ClCompile Include="Source files\Collider\CollisionHandler.cpp" />
     <ClCompile Include="Source files\Collider\WallCollisionHandler.cpp" />
     <ClCompile Include="Source files\Game\BricksBallCollisionsProcessor.cpp" />
+    <ClCompile Include="Source files\Game\BricksResetter.cpp" />
     <ClCompile Include="Source files\Game\CollisionProcessor.cpp" />
+    <ClCompile Include="Source files\Game\FinishGame.cpp" />
     <ClCompile Include="Source files\Game\EachOfTheMovableObjectsProccessor.cpp" />
+    <ClCompile Include="Source files\Game\GameStarter.cpp" />
     <ClCompile Include="Source files\Game\MovableObjectsProcessor.cpp" />
     <ClCompile Include="Source files\Game\NewGameScreenSizeAdapter.cpp" />
     <ClCompile Include="Source files\Game\ObjectsInitializer.cpp" />
+    <ClCompile Include="Source files\Game\PlayerAndBallResetter.cpp" />
     <ClCompile Include="Source files\Game\PlayerBallCollisionsProcessor.cpp" />
     <ClCompile Include="Source files\Game\WallBallCollisionProcessor.cpp" />
     <ClCompile Include="Source files\Input\InputProcessor.cpp" />
@@ -151,7 +155,6 @@
     <ClCompile Include="Source files\Physics\BasicContactDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\CornerDirectionAfterCollisionSetter.cpp" />
     <ClCompile Include="Source files\Physics\DirectionModificationCalculator.cpp" />
-    <ClCompile Include="Source files\Physics\ModifierApplier.cpp" />
     <ClCompile Include="Source files\Physics\OppositeAndgleDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\ObjectMover.cpp" />
     <ClCompile Include="Source files\Physics\StraightDirectionsChecker.cpp" />

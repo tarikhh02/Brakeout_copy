@@ -1,24 +1,27 @@
 #include "Game.h"
 
-void Game::ProcessBallCollisionsWithWalls()
+bool Game::ProcessBallCollisionsWithWalls()
 {
 	Collider::CollisionType collisionType = Collider::HandleWallCollisions(&ball, renderer.bufferWidth, renderer.bufferHeight);
 
 	if (collisionType == Collider::DIE_COLLISION)
 	{
-		float startSpeed = -1;
-
 		player.livesNumber--;
 
 		if (player.livesNumber <= 0)
-			startSpeed = 0;
+		{
+			FinishGame("die");
+		}
+		ResetBallAndPlayer();
 
-		ball.SetUpNewPosition(renderer.bufferWidth / 2, renderer.bufferHeight / 2);
-		ball.physicsVelocity.SetDirection(0, startSpeed);
-
-		return;
+		return true;
 	}
 
-	if(collisionType != Collider::NO_COLLISION)
+	if (collisionType != Collider::NO_COLLISION)
+	{
 		Physics::SetUpDirectionAfterBasicContact(collisionType, &ball.physicsVelocity, 0);
+		return true;
+	}
+
+	return false;
 }

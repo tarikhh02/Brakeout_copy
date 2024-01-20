@@ -11,7 +11,7 @@ void Game::ProcessMovableObjects()
 	std::thread([](Game* game)
 		{
 			game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true);
-		}, this).detach();
+		}, this).join();
 			
 	ProcessEachMovableObject(&ball, &ball.physicsVelocity, false);
 		

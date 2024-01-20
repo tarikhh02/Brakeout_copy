@@ -7,7 +7,7 @@ bool Game::ProcessBallCollisionsWithBricks()
 
 	for (int i = 0; i < level.columnCount * level.rowCount; i++)
 	{
-		if (bricks[i].id == '_')
+		if (bricks[i].id == '_' || bricks[i].isDestroyed)
 			continue;
 
 		collisionType = Collider::HandleCollisions(&ball, &ball.physicsVelocity, bricks + i);
@@ -23,9 +23,15 @@ bool Game::ProcessBallCollisionsWithBricks()
 
 				if (bricks[i].hitPoints <= 0)
 				{
-					bricks[i].id = '_';
+					bricks[i].isDestroyed = true;
 					renderer.ResetTextureFromLastPosition(bricks[i].xPos, bricks[i].yPos, bricks[i].width, bricks[i].height, &level);
 					Audio::PlaySoundFromPath(bricks[i].breakSoundPath);
+					
+					bricksToDestroy--;
+
+					if (bricksToDestroy <= 0)
+						FinishGame("win");
+					
 					break;
 				}
 			}

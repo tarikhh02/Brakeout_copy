@@ -9,6 +9,7 @@ public:
 	int hitPoints = 0;
 	const char* hitSoundPath = "";
 	const char* breakSoundPath = "";
+	bool isDestroyed = false;
 
 public:
 	BrickType() : ObjectBase(){}
