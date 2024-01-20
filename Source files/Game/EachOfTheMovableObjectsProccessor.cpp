@@ -9,10 +9,13 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 
 	renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
 
-	if(!isPlayer)
+	if (!isPlayer)
 		ProcessCollisions();
 
-	if (!object->imageDecoded)
-		object->DecodeTexture();
-	renderer.DrawTexture(object->xPos, object->yPos, object);
+	std::thread([](Renderer* renderer, ObjectBase* object)
+		{
+			if (!object->imageDecoded)
+				object->DecodeTexture();
+			renderer->DrawTexture(object->xPos, object->yPos, object);
+		}, &renderer, object).detach();
 }
