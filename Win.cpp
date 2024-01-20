@@ -64,11 +64,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 	while (game.isGameRunning)
 	{
-		LARGE_INTEGER frequency, startTime, endTime;
-
-		QueryPerformanceFrequency(&frequency);
-
-		QueryPerformanceCounter(&startTime);
+		std::chrono::high_resolution_clock::time_point startTime = std::chrono::high_resolution_clock::now();
 
 		void* bufferToRender;
 
@@ -93,9 +89,12 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 				StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY); 
 			}, &game.canAccessFunction).join();
 		
-		QueryPerformanceCounter(&endTime);
+		std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
 
-		game.deltaTime = (float)(endTime.QuadPart - startTime.QuadPart) / frequency.QuadPart;
+		float elapsed = std::chrono::duration<float>(endTime - startTime).count();
+
+		if(elapsed < game.deltaTime)
+			std::this_thread::sleep_for(std::chrono::microseconds((int)(100000 * (game.deltaTime - elapsed))));
 	}
 
 	Sleep(2000);

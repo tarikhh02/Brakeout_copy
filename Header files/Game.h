@@ -17,7 +17,7 @@ public:
 	int bricksToDestroy;
 
 	Renderer renderer;
-	float deltaTime = 0;
+	float deltaTime = 0.0167;
 	Level level;
 	BrickType* bricks = nullptr;
 	Player player;
