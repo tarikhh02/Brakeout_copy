@@ -132,7 +132,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DirectionModificationCalculator.cpp" />
     <ClCompile Include="Source files\Audio\AudioPlayer.cpp" />
     <ClCompile Include="Source files\Collider\CollisionHandler.cpp" />
     <ClCompile Include="Source files\Collider\WallCollisionHandler.cpp" />
@@ -151,8 +150,11 @@
     <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocity.cpp" />
     <ClCompile Include="Source files\Physics\BasicContactDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\CornerDirectionAfterCollisionSetter.cpp" />
+    <ClCompile Include="Source files\Physics\DirectionModificationCalculator.cpp" />
+    <ClCompile Include="Source files\Physics\ModifierApplier.cpp" />
     <ClCompile Include="Source files\Physics\OppositeAndgleDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\ObjectMover.cpp" />
+    <ClCompile Include="Source files\Physics\StraightDirectionsChecker.cpp" />
     <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp" />
     <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp" />
     <ClCompile Include="Source files\Renderer\TextureDrawer.cpp" />

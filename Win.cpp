@@ -56,6 +56,8 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 	HDC hdc = GetDC(window);
 
+	Sleep(2000);
+
 	game.isGameRunning = true;
 
 	while (game.isGameRunning)
@@ -83,9 +85,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
 		QueryPerformanceCounter(&endTime);
 
-		float dtTemp = (float)(endTime.QuadPart - startTime.QuadPart) / frequency.QuadPart;
-
-		game.deltaTime = dtTemp;
+		game.deltaTime = (float)(endTime.QuadPart - startTime.QuadPart) / frequency.QuadPart;
 	}
 
 	Sleep(2000);
