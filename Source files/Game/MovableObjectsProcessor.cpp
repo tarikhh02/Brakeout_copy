@@ -8,12 +8,13 @@ void Game::ProcessMovableObjects()
 
 	canAccessFunction = false;
 
-	std::thread([](Game* game)
-		{
-			game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true);
-		}, this).join();
-			
-	ProcessEachMovableObject(&ball, &ball.physicsVelocity, false);
-		
-	canAccessFunction = true;
+	std::thread([](Game* game) { game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true); }, this).detach();
+
+	std::thread([](Game* game, bool* canAccessFunction) 
+		{ 
+			game->ProcessEachMovableObject(&game->ball, &game->ball.physicsVelocity, false); 
+			*canAccessFunction = true; 
+		}, this, &canAccessFunction).detach();
+
+	//canAccessFunction = true;
 }

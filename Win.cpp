@@ -88,7 +88,10 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 		bufferToRender = game.renderer.bufferMemory;
 
 		//Render the game
-		StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY);
+		std::thread([hdc](bool* canAccessFunction) 
+			{ 
+				StretchDIBits(hdc, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, 0, 0, game.renderer.bufferWidth, game.renderer.bufferHeight, game.renderer.bufferMemory, &game.renderer.bufferBitInfo, DIB_RGB_COLORS, SRCCOPY); 
+			}, &game.canAccessFunction).join();
 		
 		QueryPerformanceCounter(&endTime);
 
