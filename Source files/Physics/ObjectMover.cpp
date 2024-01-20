@@ -10,11 +10,11 @@ void Physics::MoveObject(ObjectBase* object, PhysicsVelocity* physicsVelocityCom
 	if(physicsVelocityComponent->xDirection != 0 && physicsVelocityComponent->yDirection != 0)
 		directionModifierValue = CalculateAngleModifier(physicsVelocityComponent->xDirection, physicsVelocityComponent->yDirection);
 
-	float newXPosPrecentage = (physicsVelocityComponent->xDirection * 2 * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
-	float newYPosPrecentage = (physicsVelocityComponent->yDirection * 2 * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
+	float newXPosPrecentage = (physicsVelocityComponent->xDirection * 10 * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
+	float newYPosPrecentage = (physicsVelocityComponent->yDirection * 10 * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
 
-	newXPos += (int)newXPosPrecentage;
-	newYPos += (int)newYPosPrecentage;
+	newXPos += (int)(newXPosPrecentage / 10);
+	newYPos += (int)(newYPosPrecentage / 10);
 
 	if (newXPos + object->width / 2 > maxX)
 		newXPos = maxX - object->width / 2;
