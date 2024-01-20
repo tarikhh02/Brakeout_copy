@@ -91,10 +91,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 		
 		std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
 
-		float elapsed = std::chrono::duration<float>(endTime - startTime).count();
-
-		if(elapsed < game.deltaTime)
-			std::this_thread::sleep_for(std::chrono::microseconds((int)(100000 * (game.deltaTime - elapsed))));
+		game.deltaTime = std::chrono::duration<float>(endTime - startTime).count();
 	}
 
 	Sleep(2000);

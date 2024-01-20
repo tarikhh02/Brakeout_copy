@@ -12,10 +12,7 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 	if (!isPlayer)
 		ProcessCollisions();
 
-	std::thread([](Renderer* renderer, ObjectBase* object)
-		{
-			if (!object->imageDecoded)
+	if (!object->imageDecoded)
 				object->DecodeTexture();
-			renderer->DrawTexture(object->xPos, object->yPos, object);
-		}, &renderer, object).detach();
+	renderer.DrawTexture(object->xPos, object->yPos, object);
 }
