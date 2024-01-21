@@ -12,6 +12,6 @@ void Input::ProcessInput(Game* game)
 		game->player.physicsVelocity.SetDirection(1, 0);
 	else if (!isDown && (key == 'A' || key == 'D'))
 		game->player.physicsVelocity.SetDirection(0, 0);
-	else if (key == VK_ESCAPE && isDown)
+	else if (key == VK_SPACE && isDown)
 		game->StartGame();
 }
