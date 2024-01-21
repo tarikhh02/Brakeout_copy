@@ -5,9 +5,16 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 	int lastXPos = object->xPos;
 	int lastYPos = object->yPos;
 
-	Physics::MoveObject(object, physicsVelocityComponent, deltaTime, renderer.bufferWidth, renderer.bufferHeight);
+	movementDeltaTimeHolder += deltaTime;
 
-	renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
+	if (movementDeltaTimeHolder >= 0.0025)
+	{
+		Physics::MoveObject(object, physicsVelocityComponent, movementDeltaTimeHolder, renderer.bufferWidth, renderer.bufferHeight);
+
+		renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
+
+		movementDeltaTimeHolder = 0;
+	}
 
 	if (!isPlayer)
 		ProcessCollisions();

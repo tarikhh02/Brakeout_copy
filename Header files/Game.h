@@ -16,8 +16,10 @@ public:
 	int columnsInitialized = -1;
 	int bricksToDestroy;
 
+	float deltaTime = 0;
+	float movementDeltaTimeHolder = 0;
+
 	Renderer renderer;
-	float deltaTime = 0.0167;
 	Level level;
 	BrickType* bricks = nullptr;
 	Player player;
