@@ -8,15 +8,22 @@ void Game::ProcessMovableObjects()
 
 	canAccessFunction = false;
 
-	std::thread([](Game* game)
-		{
-			game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true);
-		}, this).detach();
+	movementDeltaTimeHolder += deltaTime;
 
-	std::thread([](Game* game, bool* canAccessFunction)
+	std::thread([](Game* game, float movementDeltaTimeHolder)
 		{
-			game->ProcessEachMovableObject(&game->ball, &game->ball.physicsVelocity, false);
+			game->ProcessEachMovableObject(&game->ball, &game->ball.physicsVelocity, false, movementDeltaTimeHolder);
+
+		}, this, movementDeltaTimeHolder).detach();
+
+	std::thread([](Game* game, float movementDeltaTimeHolder, bool* canAccessFunction)
+		{
+			game->ProcessEachMovableObject(&game->player, &game->player.physicsVelocity, true, movementDeltaTimeHolder);
 
 			*canAccessFunction = true;
-		}, this, &canAccessFunction).detach();
+
+		}, this, movementDeltaTimeHolder, &canAccessFunction).detach();
+
+		if (movementDeltaTimeHolder > 0.0025)
+			movementDeltaTimeHolder = 0;
 }

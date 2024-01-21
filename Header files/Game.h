@@ -44,6 +44,6 @@ public:
 	virtual void StartGame();
 
 private:
-	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer);
+	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer, float movementDeltaTimeHolder);
 	virtual void ProcessCollisions();
 };

@@ -1,19 +1,15 @@
 #include "Game.h"
 
-void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer)
+void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer, float deltaTimeCounterValue)
 {
 	int lastXPos = object->xPos;
 	int lastYPos = object->yPos;
 
-	movementDeltaTimeHolder += deltaTime;
-
-	if (movementDeltaTimeHolder >= 0.0025)
+	if(deltaTimeCounterValue > 0.0025)
 	{
-		Physics::MoveObject(object, physicsVelocityComponent, movementDeltaTimeHolder, renderer.bufferWidth, renderer.bufferHeight);
+		Physics::MoveObject(object, physicsVelocityComponent, deltaTimeCounterValue, renderer.bufferWidth, renderer.bufferHeight);
 
 		renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
-
-		movementDeltaTimeHolder = 0;
 	}
 
 	if (!isPlayer)
