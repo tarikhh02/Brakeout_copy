@@ -10,5 +10,8 @@ void Game::ResetBricks()
 			bricks[i].isDestroyed = false;
 			bricksToDestroy++;
 		}
+
+		if (bricks[i].hitPoints < 2)
+			bricks[i].hitPoints = 2;
 	}
 }
