@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "XMLDocumentLoader.h"
 
 void Game::ResetBricks()
 {
@@ -11,7 +12,7 @@ void Game::ResetBricks()
 			bricksToDestroy++;
 		}
 
-		if (bricks[i].hitPoints < 2)
-			bricks[i].hitPoints = 2;
+		if (bricks[i].hitPoints < bricks[i].hitPointsHolderValue)
+			bricks[i].hitPoints = bricks[i].hitPointsHolderValue;
 	}
 }

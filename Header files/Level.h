@@ -1,6 +1,5 @@
 #pragma once
 
-#include <malloc.h>
 #include "ObjectBase.h"
 
 class Level: public ObjectBase
@@ -20,11 +19,7 @@ public:
 		this->rowSpacing = rowSpacing;
 		this->coulmnSpacing = columnSpacing;
 	}
-	~Level()
-	{
-		if (imageDecoded)
-			free(imageDecoded);
-	}
+	~Level(){}
 
 	void ObjectBase::ObjectInfo() {}
 };

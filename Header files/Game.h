@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Physics.h"
 #include "Ball.h"
+#include "XMLDocumentLoader.h"
 
 class Game
 {
@@ -28,7 +29,6 @@ public:
 public:
 	~Game()
 	{
-		free(bricks->imageDecoded);
 		delete[] bricks;
 	}
 

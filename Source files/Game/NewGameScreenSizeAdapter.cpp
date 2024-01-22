@@ -25,20 +25,15 @@ void Game::AdaptGameForNewScreenSize(HWND hWnd)
 	{
 		for (int x = 0; x < level.columnCount; x++)
 		{
-				if (x == 0 && y == 0)
-				{
-					if (!bricks[y * level.columnCount + x].DecodeTexture())
-					{
-						canAccessFunction = true;
-						return;
-					}
-				}
 			std::thread([](Renderer* renderer, BrickType* brick, Level* level, int x, int y, int* columnsInitialized, bool* canAccessFunction)
 				{
 					if (brick->id != '_')
 					{
-						if (x != 0 || y != 0)
-							brick->imageDecoded = brick[-y * level->columnCount - x].imageDecoded;
+						if(!brick->DecodeTexture())
+						{
+							*canAccessFunction = true;
+							return;
+						}
 
 						renderer->DrawTexture(brick->xPos, brick->yPos, brick);
 					}

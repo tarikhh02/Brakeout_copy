@@ -1,6 +1,5 @@
 #pragma once
 
-#include <malloc.h>
 #include "ObjectBase.h"
 #include "PhysicsVelocity.h"
 
@@ -15,11 +14,7 @@ public:
 	{
 		physicsVelocity = PhysicsVelocity(0, 0, 1000);
 	}
-	~Ball()
-	{
-		if (imageDecoded)
-			free(imageDecoded);
-	}
+	virtual ~Ball(){}
 
 	void ObjectBase::ObjectInfo() {}
 };

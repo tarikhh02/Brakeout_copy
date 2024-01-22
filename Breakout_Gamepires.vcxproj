@@ -158,10 +158,12 @@
     <ClCompile Include="Source files\Physics\OppositeAndgleDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\ObjectMover.cpp" />
     <ClCompile Include="Source files\Physics\StraightDirectionsChecker.cpp" />
+    <ClCompile Include="Source files\PUGIXML\pugixml.cpp" />
     <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp" />
     <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp" />
     <ClCompile Include="Source files\Renderer\TextureDrawer.cpp" />
     <ClCompile Include="Source files\Renderer\TextureFromLastPositionResetter.cpp" />
+    <ClCompile Include="Source files\XMLDocumentLoader\XMLDocumentLoader.cpp" />
     <ClCompile Include="Win.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,8 +178,11 @@
     <ClInclude Include="Header files\Physics.h" />
     <ClInclude Include="Header files\PhysicsVelocity.h" />
     <ClInclude Include="Header files\Player.h" />
+    <ClInclude Include="Header files\PUGIXML\pugiconfig.hpp" />
+    <ClInclude Include="Header files\PUGIXML\pugixml.hpp" />
     <ClInclude Include="Header files\Renderer.h" />
     <ClInclude Include="Header files\stb_image.h" />
+    <ClInclude Include="Header files\XMLDocumentLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\backgroundTexture.jpg" />
@@ -196,6 +201,9 @@
     <Media Include="Resources\Sounds\mediumBrickHitSound.wav" />
     <Media Include="Resources\Sounds\softBrickBreakingSound.wav" />
     <Media Include="Resources\Sounds\softBrickHitSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resources\.xml files\Level1.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

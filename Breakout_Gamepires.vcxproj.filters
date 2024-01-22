@@ -81,6 +81,21 @@
     <Filter Include="Header Files\Audio">
       <UniqueIdentifier>{b073ce33-f0ea-4bba-869d-7076fc695cf7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\.xml documents">
+      <UniqueIdentifier>{c09d05a4-0c13-4e61-9c2d-3d16ddbe7cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\XMLDocumentLoader">
+      <UniqueIdentifier>{0b8d3319-4e98-435c-9543-da7cb37d7e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XMLDocumentLoader">
+      <UniqueIdentifier>{ef5c021b-dfd4-45a3-8a30-0110f3a53a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PUGIXML">
+      <UniqueIdentifier>{d20914fc-38f9-4323-920c-2e0f77cbf3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PUGIXML">
+      <UniqueIdentifier>{1e5c1979-32d2-4f80-8b85-c01ce80f7fc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Win.cpp">
@@ -176,13 +191,16 @@
     <ClCompile Include="Source files\Game\BricksResetter.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Source files\XMLDocumentLoader\XMLDocumentLoader.cpp">
+      <Filter>Source Files\XMLDocumentLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\PUGIXML\pugixml.cpp">
+      <Filter>Source Files\PUGIXML</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Ball.h">
       <Filter>Header Files\Ball</Filter>
-    </ClInclude>
-    <ClInclude Include="Header files\BrickType.h">
-      <Filter>Header Files\BrickType</Filter>
     </ClInclude>
     <ClInclude Include="Header files\Game.h">
       <Filter>Header Files\Game</Filter>
@@ -216,6 +234,18 @@
     </ClInclude>
     <ClInclude Include="Header files\Audio.h">
       <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\XMLDocumentLoader.h">
+      <Filter>Header Files\XMLDocumentLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\PUGIXML\pugixml.hpp">
+      <Filter>Header Files\PUGIXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\PUGIXML\pugiconfig.hpp">
+      <Filter>Header Files\PUGIXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\BrickType.h">
+      <Filter>Header Files\BrickType</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -263,5 +293,10 @@
     <Media Include="Resources\Sounds\mediumBrickBreakingSound.wav">
       <Filter>Resources\Sounds</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resources\.xml files\Level1.xml">
+      <Filter>Resources\.xml documents</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@
 class Player : public ObjectBase
 {
 public:
+	int highScore = 0;
 	int livesNumber = 3;
 	bool isAlive = true;
 	PhysicsVelocity physicsVelocity;
@@ -16,11 +17,7 @@ public:
 	{
 		physicsVelocity = PhysicsVelocity(0, 0, 1000);
 	}
-	~Player()
-	{
-		if (imageDecoded)
-			free(imageDecoded);
-	}
+	~Player(){}
 
 	void ObjectBase::ObjectInfo(){}
 };

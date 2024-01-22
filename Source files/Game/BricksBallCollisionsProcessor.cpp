@@ -26,6 +26,8 @@ bool Game::ProcessBallCollisionsWithBricks()
 					bricks[i].isDestroyed = true;
 					renderer.ResetTextureFromLastPosition(bricks[i].xPos, bricks[i].yPos, bricks[i].width, bricks[i].height, &level);
 					Audio::PlaySoundFromPath(bricks[i].breakSoundPath);
+
+					player.highScore += bricks[i].brickBreakScore;
 					
 					bricksToDestroy--;
 

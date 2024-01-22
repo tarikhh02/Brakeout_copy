@@ -20,6 +20,11 @@ public:
 		this->height = height;
 		this->texturePath = texturePath;
 	}
+	virtual ~ObjectBase()
+	{
+		if (imageDecoded)
+		free(imageDecoded);
+	}
 
 	virtual void ObjectInfo() = 0;
 
