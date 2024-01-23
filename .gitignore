@@ -398,6 +398,10 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Allow specific folder
+!x64/Release/Resources/
 !x64/Release/Resources/Sounds/
+!x64/Release/Resources/Sounds/*
 !x64/Release/Resources/Images/
+!x64/Release/Resources/Images/*
 !x64/Release/Resources/.xml files/
+!x64/Release/Resources/.xml files/*
