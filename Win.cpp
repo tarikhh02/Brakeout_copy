@@ -2,6 +2,7 @@
 #include <thread>
 #include <chrono>
 #include "Game.h"
+#include "UI.h"
 #include "Input.h"
 
 Game game;
@@ -24,7 +25,7 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		std::thread([hWnd]() 
 			{ 
 				game.AdaptGameForNewScreenSize(hWnd); 
-				//std::thread([](Renderer* renderer, Level* level) {UI::ShowHUD(renderer);}, &game.renderer, &game.level).detach();
+				UI::DisplayStartHUD(&game);
 				game.ResetBallAndPlayer();
 			}).detach();
 	}

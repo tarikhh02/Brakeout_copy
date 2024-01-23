@@ -6,9 +6,11 @@ void UI::ShowTextUI(const char* textToDraw, int xPos, int yPos, int width, int h
 
 	int xSize = (width - (textLength * letterSpacing)) / (textLength * 6);
 	int ySize = height / 7;
+	if (UIPositionValues != nullptr)
+	{
+		UIPositionValues[1] = (7 * ySize);
+		UIPositionValues[0] = (textLength * (6 * xSize + letterSpacing));
+	}
 
-	UIPositionValues[1] = 7 * ySize;
-	UIPositionValues[0] = (textLength * (6 * xSize + letterSpacing));
-
-	renderer->DrawExpression(textToDraw, xPos - UIPositionValues[0] / 2, yPos - UIPositionValues[1] / 2, xSize, ySize, letterSpacing, color);
+	renderer->DrawExpression(textToDraw, xPos - ((textLength * (6 * xSize + letterSpacing)) / 2), yPos - ((7 * ySize) / 2), xSize, ySize, letterSpacing, color);
 }

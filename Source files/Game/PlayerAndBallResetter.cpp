@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "UI.h"
 
 void Game::ResetBallAndPlayer()
 {
@@ -12,11 +13,19 @@ void Game::ResetBallAndPlayer()
 	renderer.ResetTextureFromLastPosition(player.xPos, player.yPos, player.width, player.height, &level);
 	player.SetUpNewPosition(renderer.bufferWidth / 2, player.height);
 	player.isAlive = false;
+	player.hasWon = false;
 
-	std::thread([](Renderer* renderer) 
+	std::thread([](Renderer* renderer, bool hasPlayerWon) 
 		{ 
-			UI::ShowTextUI("PRESS SPACE TO START", renderer->bufferWidth / 2, 200, renderer->bufferWidth / 3, 35, 3, UI::startUIPositionValues, 0x0f0f0f0f, renderer);
-		}, &renderer).detach();
+			const char* textToShow = nullptr;
+
+			if (hasPlayerWon)
+				textToShow = "PRESS SPACE TO CONTINUE";
+			else
+				textToShow = "PRESS SPACE TO START";
+
+			UI::ShowTextUI(textToShow, renderer->bufferWidth / 2, 200, renderer->bufferWidth / 3, 35, 3, UI::startUIPositionValues, 0x0f0f0f0f, renderer);
+		}, &renderer, player.hasWon).detach();
 
 	std::thread([](Renderer* renderer, Level* level, int index)
 		{

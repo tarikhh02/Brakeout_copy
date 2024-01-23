@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Renderer.h"
+#include"Game.h"
 
 class UI
 {
@@ -24,5 +24,5 @@ public:
 	}
 
 	static void ShowTextUI(const char* textToDraw, int xPos, int yPos, int width, int height, int letterSpacing, int* UIPositionValues, unsigned int color, Renderer* renderer);
-	static void ShowHUD(Renderer* renderer, Level* level);
+	static void DisplayStartHUD(Game* game);
 };

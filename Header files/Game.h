@@ -5,7 +5,6 @@
 #include "Player.h"
 #include "Physics.h"
 #include "Ball.h"
-#include "UI.h"
 #include "XMLDocumentLoader.h"
 
 class Game

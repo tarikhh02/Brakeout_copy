@@ -19,14 +19,14 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 
 		int index = 0;
 
-		for (index = 0; index < 25; index++)
+		for (index = 0; index < 27; index++)
 		{
 			if (textToDraw[i] == UI::characters[index][0])
 				break;
 		}
 
-		if (index >= 25)
-			index = 24;
+		if (index >= 27)
+			index = 26;
 
 		for (int i = 1; i < strlen(UI::characters[index]); i++)
 		{

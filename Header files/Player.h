@@ -8,6 +8,7 @@ class Player : public ObjectBase
 public:
 	int highScore = 0;
 	int livesNumber = 3;
+	bool hasWon = false;
 	bool isAlive = true;
 	PhysicsVelocity physicsVelocity;
 

@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "UI.h"
 #include "Audio.h"
 
 bool Game::ProcessBallCollisionsWithBricks()
@@ -32,8 +33,20 @@ bool Game::ProcessBallCollisionsWithBricks()
 					bricksToDestroy--;
 
 					if (bricksToDestroy <= 0)
+					{
+						player.hasWon = true;
 						FinishGame("YOU WON");
+					}
 					
+					std::thread([](Renderer* renderer, Level* level, int highScore)
+						{
+							renderer->ResetTextureFromLastPosition(110, renderer->bufferHeight - 25, UI::scoreUIPositionValues[0] + 10, UI::scoreUIPositionValues[1] + 10, level);
+
+							std::string scoreTxt = "SCORE: " + std::to_string(highScore);
+
+							UI::ShowTextUI(scoreTxt.c_str(), 110, renderer->bufferHeight - 25, 200, 35, 3, UI::scoreUIPositionValues, 0x0f0f0f0f, renderer);
+						}, &renderer, &level, player.highScore).detach();
+
 					break;
 				}
 			}
