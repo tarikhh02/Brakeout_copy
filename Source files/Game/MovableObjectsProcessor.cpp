@@ -2,7 +2,7 @@
 
 void Game::ProcessMovableObjects()
 {
-	if (!canAccessFunction || !isGameRunning)
+	if (!canAccessFunction || !isGameRunning || !hasNextLevelLoaded)
 		return;
 
 	canAccessFunction = false;

@@ -215,6 +215,9 @@
     <ClCompile Include="Source files\UI\DisplayingHUD.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Source files\Game\NextLevelLoader.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Ball.h">
@@ -316,6 +319,9 @@
     </Media>
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="Resources\.xml files\Level2.xml">
+      <Filter>Resources\.xml documents</Filter>
+    </Xml>
     <Xml Include="Resources\.xml files\Level1.xml">
       <Filter>Resources\.xml documents</Filter>
     </Xml>

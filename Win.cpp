@@ -22,9 +22,9 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	else if (uMsg == WM_SIZE)
 	{
-		std::thread([hWnd]() 
+		std::thread([]() 
 			{ 
-				game.AdaptGameForNewScreenSize(hWnd); 
+				game.AdaptGameForNewScreenSize(game.hWnd); 
 				UI::DisplayStartHUD(&game);
 				game.ResetBallAndPlayer();
 			}).detach();
@@ -32,10 +32,10 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	
 	else if (uMsg == WM_CREATE)
 	{
-		//Initialize objects for the game
-		std::thread([hWnd]() { game.InitializeObjects(); }).detach();
+		game.hWnd = hWnd;
 
-		//load main menu screen
+		//Initialize objects for the game
+		std::thread([]() { game.InitializeObjects(); }).detach();
 	}
 
 	else if (uMsg == WM_KEYDOWN || uMsg == WM_KEYUP)

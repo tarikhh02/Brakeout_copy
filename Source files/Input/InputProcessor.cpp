@@ -17,7 +17,6 @@ void Input::ProcessInput(Game* game)
 		if (!game->player.hasWon)
 			game->StartGame();
 		else
-		{//Load next level
-		}
+			game->LoadNextLevel();
 	}
 }

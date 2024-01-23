@@ -1,47 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level
-	RowCount="3"
-	ColumnCount="20"
+	RowCount="1"
+	ColumnCount="1"
 	RowSpacing="3"
 	ColumnSpacing="3"
 	BackgroundTexture="Resources\Images\backgroundTexture.jpg">
 	<BrickTypes>
 
-	<!-- Soft Brick -->
-	<BrickType
-		Id="S"
-		Texture="Resources\Images\softBrickTexture.jpg"
-		HitPoints="1"
-		HitSound="Resources\Sounds\softBrickHitSound.wav"
-		BreakSound="Resources\Sounds\softBrickBreakingSound.wav"
-		BreakScore="50" />
-	<!-- Medium Brick -->
-	<BrickType
-		Id="M"
-		Texture="Resources\Images\mediumBrickTexture.jpg"
-		HitPoints="2"
-		HitSound="Resources\Sounds\mediumBrickHitSound.wav"
-		BreakSound="Resources\Sounds\mediumBrickBreakingSound.wav"
-		BreakScore="100" />
-	<!-- Hard Brick -->
-	<BrickType
-		Id="H"
-		Texture="Resources\Images\hardBrickTexture.jpg"
-		HitPoints="3"
-		HitSound="Resources\Sounds\hardBrickHitSound.wav"
-		BreakSound="Resources\Sounds\hardBrickBreakingSound.wav"
-		BreakScore="150" />
-	<!-- Impenetrable Brick -->
-	<BrickType
-		Id="I"
-		Texture="Resources\Images\impenetrableBrickTexture.jpg"
-		HitPoints="1"
-		HitSound="Resources\Sounds\impenetrableBrickHitSound.wav" />
+		<!-- Soft Brick -->
+		<BrickType
+			Id="S"
+			Texture="Resources\Images\softBrickTexture.jpg"
+			HitPoints="1"
+			HitSound="Resources\Sounds\softBrickHitSound.wav"
+			BreakSound="Resources\Sounds\softBrickBreakingSound.wav"
+			BreakScore="50" />
+		<!-- Medium Brick -->
+		<BrickType
+			Id="M"
+			Texture="Resources\Images\mediumBrickTexture.jpg"
+			HitPoints="2"
+			HitSound="Resources\Sounds\mediumBrickHitSound.wav"
+			BreakSound="Resources\Sounds\mediumBrickBreakingSound.wav"
+			BreakScore="100" />
+		<!-- Hard Brick -->
+		<BrickType
+			Id="H"
+			Texture="Resources\Images\hardBrickTexture.jpg"
+			HitPoints="3"
+			HitSound="Resources\Sounds\hardBrickHitSound.wav"
+			BreakSound="Resources\Sounds\hardBrickBreakingSound.wav"
+			BreakScore="150" />
+		<!-- Impenetrable Brick -->
+		<BrickType
+			Id="I"
+			Texture="Resources\Images\impenetrableBrickTexture.jpg"
+			HitPoints="1"
+			HitSound="Resources\Sounds\impenetrableBrickHitSound.wav" />
 
 	</BrickTypes>
 	<Bricks>
-		H H H H H H H H H H H H H H H H H H H H
-		M M I I M M _ _ M M M M _ _ M M I I M M
-		S S S S S S S S S S S S S S S S S S S S
+		S
 	</Bricks>
 </Level>

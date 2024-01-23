@@ -13,7 +13,6 @@ void Game::ResetBallAndPlayer()
 	renderer.ResetTextureFromLastPosition(player.xPos, player.yPos, player.width, player.height, &level);
 	player.SetUpNewPosition(renderer.bufferWidth / 2, player.height);
 	player.isAlive = false;
-	player.hasWon = false;
 
 	std::thread([](Renderer* renderer, bool hasPlayerWon) 
 		{ 

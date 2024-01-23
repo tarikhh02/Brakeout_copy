@@ -14,6 +14,7 @@ public:
 	bool isGameFinished = true;
 	bool isGameRunning = true;
 	bool isInitializationFinished = false;
+	bool hasNextLevelLoaded = true;
 	int columnsInitialized = -1;
 	int bricksToDestroy;
 	
@@ -22,6 +23,7 @@ public:
 	float deltaTime = 0;
 	float movementDeltaTimeHolder = 0;
 
+	HWND hWnd;
 	Renderer renderer;
 	Level level;
 	BrickType* bricks = nullptr;
@@ -44,6 +46,7 @@ public:
 	virtual void ResetBallAndPlayer();
 	virtual void ResetBricks();
 	virtual void StartGame();
+	virtual void LoadNextLevel();
 
 private:
 	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer, float movementDeltaTimeHolder);

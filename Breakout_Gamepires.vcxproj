@@ -143,6 +143,7 @@
     <ClCompile Include="Source files\Game\GameStarter.cpp" />
     <ClCompile Include="Source files\Game\MovableObjectsProcessor.cpp" />
     <ClCompile Include="Source files\Game\NewGameScreenSizeAdapter.cpp" />
+    <ClCompile Include="Source files\Game\NextLevelLoader.cpp" />
     <ClCompile Include="Source files\Game\ObjectsInitializer.cpp" />
     <ClCompile Include="Source files\Game\PlayerAndBallResetter.cpp" />
     <ClCompile Include="Source files\Game\PlayerBallCollisionsProcessor.cpp" />
@@ -209,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\.xml files\Level1.xml" />
+    <Xml Include="Resources\.xml files\Level2.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

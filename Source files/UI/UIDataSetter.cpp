@@ -16,7 +16,7 @@ const char* UI::characters[27] =
 	"N@    @\n@   @@\n@  @ @\n@  @ @\n@ @  @\n@ @  @\n@@   @",
 	"Y  @@  \n  @@  \n  @@  \n  @@  \n @  @ \n@    @\n@    @",
 	":      \n  @@  \n  @@  \n      \n  @@  \n  @@  \n      ",
-	"W@    @\n@    @\n@    @\n@ @@ @\n@ @@ @\n@ @@ @\n@@  @@",
+	"W@@  @@\n@ @@ @\n@ @@ @\n@ @@ @\n@    @\n@    @\n@    @",
 	"I  @@  \n  @@  \n  @@  \n  @@  \n  @@  \n  @@  \n  @@  ",
 	"V  @@  \n @  @ \n@    @\n@    @\n@    @\n@    @\n@    @",
 	//numbers
@@ -36,7 +36,7 @@ const char* UI::characters[27] =
 
 const char* UI::playerLivesToTxt[3] = { "<", "<<" ,"<<<" };
 
-int* UI::startUIPositionValues = new int[2];
-int* UI::finishGameUIPositionValues = new int[2];
-int* UI::scoreUIPositionValues = new int[2];
-int* UI::heartsUIPositionValues = new int[2];
+int* UI::startUIPositionValues = new int[2] {0, 0};
+int* UI::finishGameUIPositionValues = new int[2] {0, 0};
+int* UI::scoreUIPositionValues = new int[2] {0, 0};
+int* UI::heartsUIPositionValues = new int[2] {0, 0};
