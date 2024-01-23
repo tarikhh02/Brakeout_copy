@@ -17,6 +17,8 @@ public:
 	bool isInitializationFinished = false;
 	int columnsInitialized = -1;
 	int bricksToDestroy;
+	
+	int currentLevel = 0;
 
 	float deltaTime = 0;
 	float movementDeltaTimeHolder = 0;

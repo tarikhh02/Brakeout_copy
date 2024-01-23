@@ -8,7 +8,15 @@ void Game::InitializeObjects()
 		return;
 	canAccessFunction = false;
 
-	XMLDocumentLoader::LoadXMLFile("Resources\\.xml files\\Level1.xml");
+	std::string levelText = "Resources\\.xml files\\Level" + std::to_string(++currentLevel) + ".xml";
+
+	XMLDocumentLoader::LoadXMLFile(levelText.c_str());
+
+	if (bricks)
+	{
+		delete[] bricks;
+		free(level.imageDecoded);
+	}
 
 	pugi::xml_node node = XMLDocumentLoader::xmlDocument.child("Level");
 
