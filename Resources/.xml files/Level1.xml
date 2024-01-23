@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level
-	RowCount="1"
-	ColumnCount="1"
+	RowCount="2"
+	ColumnCount="20"
 	RowSpacing="3"
 	ColumnSpacing="3"
 	BackgroundTexture="Resources\Images\backgroundTexture.jpg">
@@ -40,6 +40,7 @@
 
 	</BrickTypes>
 	<Bricks>
-		S
+		M M M M M M M M M M M M M M M M M M M M
+		S S S S S S S S S S S S S S S S S S S S
 	</Bricks>
 </Level>
