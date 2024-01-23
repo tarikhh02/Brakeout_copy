@@ -1,7 +1,10 @@
 #include "Game.h"
 
-void Game::ResetBallAndPlayer() 
+void Game::ResetBallAndPlayer()
 {
+	if (!isInitializationFinished)
+		return;
+
 	renderer.ResetTextureFromLastPosition(ball.xPos, ball.yPos, ball.width, ball.height, &level);
 	ball.SetUpNewPosition(renderer.bufferWidth / 2, renderer.bufferHeight / 2);
 	ball.physicsVelocity.SetDirection(0, 0);

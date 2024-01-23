@@ -21,7 +21,11 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	else if (uMsg == WM_SIZE)
 	{
-		std::thread([hWnd]() { game.AdaptGameForNewScreenSize(hWnd); }).detach();
+		std::thread([hWnd]() 
+			{ 
+				game.AdaptGameForNewScreenSize(hWnd); 
+				game.ResetBallAndPlayer();
+			}).detach();
 	}
 	
 	else if (uMsg == WM_CREATE)
@@ -64,15 +68,6 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 	while (game.isGameRunning)
 	{
 		std::chrono::high_resolution_clock::time_point startTime = std::chrono::high_resolution_clock::now();
-
-		if (!game.hasWrittenfirstMenuTxt && game.canAccessFunction)
-		{
-			game.hasWrittenfirstMenuTxt = true;
-			std::thread([](Renderer* renderer) 
-			{ 
-				UI::ShowTextUI("PRESS SPACE TO START", renderer->bufferWidth / 2, 200, renderer->bufferWidth / 3, 3, UI::startUIPositionValues, renderer);
-			}, &game.renderer).detach();
-		}
 
 		MSG message;
 		while (PeekMessage(&message, window, 0, 0, PM_REMOVE))

@@ -14,7 +14,6 @@ public:
 	bool canAccessFunction = true;
 	bool isGameFinished = true;
 	bool isGameRunning = true;
-	bool hasWrittenfirstMenuTxt = false;
 	bool isInitializationFinished = false;
 	int columnsInitialized = -1;
 	int bricksToDestroy;
