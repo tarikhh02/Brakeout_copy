@@ -18,7 +18,7 @@ void Renderer::SetUpFixedData(Level* level, BrickType* bricks)
 			int modifiedWidth = newBrickWidth - level->coulmnSpacing + addValue;
 
 			bricks[y * level->columnCount + x].SetUpNewWidthAndHeight(modifiedWidth, newBrickHeight);
-			bricks[y * level->columnCount + x].SetUpNewPosition(widthUpdateHolder + level->coulmnSpacing + modifiedWidth / 2, bufferHeight - y * (newBrickHeight + level->rowSpacing) - level->rowSpacing - (newBrickHeight) / 2);
+			bricks[y * level->columnCount + x].SetUpNewPosition(widthUpdateHolder + level->coulmnSpacing + modifiedWidth / 2, bufferHeight - 60 - y * (newBrickHeight + level->rowSpacing) - level->rowSpacing - (newBrickHeight) / 2);
 
 			widthUpdateHolder += modifiedWidth + level->coulmnSpacing;
 			widthToAdd--;

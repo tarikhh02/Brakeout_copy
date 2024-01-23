@@ -7,7 +7,7 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 
 	if(deltaTimeCounterValue > 0.0025)
 	{
-		Physics::MoveObject(object, physicsVelocityComponent, deltaTimeCounterValue, renderer.bufferWidth, renderer.bufferHeight);
+		Physics::MoveObject(object, physicsVelocityComponent, deltaTimeCounterValue, renderer.bufferWidth, renderer.bufferHeight - 60);
 
 		renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
 	}
