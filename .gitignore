@@ -33,7 +33,9 @@ bld/
 [Ll]ogs/
 
 # Allow specific folder
-!x64/Release/Resources/
+!x64/Release/Resources/Sounds
+!x64/Release/Resources/Images
+!x64/Release/Resources/.xml files
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
