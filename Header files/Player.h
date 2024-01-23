@@ -18,7 +18,7 @@ public:
 	{
 		physicsVelocity = PhysicsVelocity(0, 0, 1000);
 	}
-	~Player(){}
+	virtual ~Player(){}
 
 	void ObjectBase::ObjectInfo(){}
 };

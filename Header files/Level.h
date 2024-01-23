@@ -19,7 +19,7 @@ public:
 		this->rowSpacing = rowSpacing;
 		this->coulmnSpacing = columnSpacing;
 	}
-	~Level(){}
+	virtual ~Level(){}
 
 	void ObjectBase::ObjectInfo() {}
 };
