@@ -12,7 +12,7 @@
 		Id="S"
 		Texture="Resources\Images\softBrickTexture.jpg"
 		HitPoints="1"
-		HitSound="Resources\Sound\softBrickBreakingSound.wav"
+		HitSound="Resources\Sounds\softBrickHitSound.wav"
 		BreakSound="Resources\Sounds\softBrickBreakingSound.wav"
 		BreakScore="50" />
 	<!-- Medium Brick -->
