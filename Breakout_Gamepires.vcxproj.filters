@@ -96,6 +96,12 @@
     <Filter Include="Source Files\PUGIXML">
       <UniqueIdentifier>{1e5c1979-32d2-4f80-8b85-c01ce80f7fc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{1fc9124e-b1f1-4452-8b8a-f0e5d1488bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{76c46886-ee0c-4124-942e-5f446cf0736e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Win.cpp">
@@ -125,7 +131,7 @@
     <ClCompile Include="Source files\Physics\ObjectMover.cpp">
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocity.cpp">
+    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocitySetter.cpp">
       <Filter>Source Files\PhysicsVelocity</Filter>
     </ClCompile>
     <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp">
@@ -197,6 +203,15 @@
     <ClCompile Include="Source files\PUGIXML\pugixml.cpp">
       <Filter>Source Files\PUGIXML</Filter>
     </ClCompile>
+    <ClCompile Include="Source files\UI\UIDataSetter.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\Renderer\ExpressionDrawer.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source files\UI\TextShowingComponent.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Ball.h">
@@ -246,6 +261,9 @@
     </ClInclude>
     <ClInclude Include="Header files\BrickType.h">
       <Filter>Header Files\BrickType</Filter>
+    </ClInclude>
+    <ClInclude Include="Header files\UI.h">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

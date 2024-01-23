@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Physics.h"
 #include "Ball.h"
+#include "UI.h"
 #include "XMLDocumentLoader.h"
 
 class Game
@@ -13,6 +14,7 @@ public:
 	bool canAccessFunction = true;
 	bool isGameFinished = true;
 	bool isGameRunning = true;
+	bool hasWrittenfirstMenuTxt = false;
 	bool isInitializationFinished = false;
 	int columnsInitialized = -1;
 	int bricksToDestroy;
@@ -38,7 +40,7 @@ public:
 	virtual bool ProcessBallCollisionsWithBricks();
 	virtual bool ProcessBallCollisionsWithPlayer();
 	virtual bool ProcessBallCollisionsWithWalls();
-	virtual void FinishGame(const char* finishResult);
+	virtual void FinishGame(const char* finishText);
 	virtual void ResetBallAndPlayer();
 	virtual void ResetBricks();
 	virtual void StartGame();

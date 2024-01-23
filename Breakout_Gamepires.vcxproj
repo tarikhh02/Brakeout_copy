@@ -151,7 +151,7 @@
     <ClCompile Include="Source files\ObjectBase\ObjectPositionSetter.cpp" />
     <ClCompile Include="Source files\ObjectBase\TextureDecoder.cpp" />
     <ClCompile Include="Source files\ObjectBase\WidthAndHeightSetter.cpp" />
-    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocity.cpp" />
+    <ClCompile Include="Source files\PhysicsVelocity\PhysicsVelocitySetter.cpp" />
     <ClCompile Include="Source files\Physics\BasicContactDirectionCalculator.cpp" />
     <ClCompile Include="Source files\Physics\CornerDirectionAfterCollisionSetter.cpp" />
     <ClCompile Include="Source files\Physics\DirectionModificationCalculator.cpp" />
@@ -159,10 +159,13 @@
     <ClCompile Include="Source files\Physics\ObjectMover.cpp" />
     <ClCompile Include="Source files\Physics\StraightDirectionsChecker.cpp" />
     <ClCompile Include="Source files\PUGIXML\pugixml.cpp" />
+    <ClCompile Include="Source files\Renderer\ExpressionDrawer.cpp" />
     <ClCompile Include="Source files\Renderer\FixedDataSetter.cpp" />
     <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp" />
     <ClCompile Include="Source files\Renderer\TextureDrawer.cpp" />
     <ClCompile Include="Source files\Renderer\TextureFromLastPositionResetter.cpp" />
+    <ClCompile Include="Source files\UI\TextShowingComponent.cpp" />
+    <ClCompile Include="Source files\UI\UIDataSetter.cpp" />
     <ClCompile Include="Source files\XMLDocumentLoader\XMLDocumentLoader.cpp" />
     <ClCompile Include="Win.cpp" />
   </ItemGroup>
@@ -182,6 +185,7 @@
     <ClInclude Include="Header files\PUGIXML\pugixml.hpp" />
     <ClInclude Include="Header files\Renderer.h" />
     <ClInclude Include="Header files\stb_image.h" />
+    <ClInclude Include="Header files\UI.h" />
     <ClInclude Include="Header files\XMLDocumentLoader.h" />
   </ItemGroup>
   <ItemGroup>

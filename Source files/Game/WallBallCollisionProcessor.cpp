@@ -9,9 +9,8 @@ bool Game::ProcessBallCollisionsWithWalls()
 		player.livesNumber--;
 
 		if (player.livesNumber <= 0)
-		{
-			FinishGame("die");
-		}
+			FinishGame("YOU LOST");
+
 		ResetBallAndPlayer();
 
 		return true;

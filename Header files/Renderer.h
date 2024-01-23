@@ -22,6 +22,7 @@ public:
 	virtual void SetUpFixedData(Level* level, BrickType* bricks);
 	virtual void ProcessSizeChangeAndSetMemory(HWND hWnd);
 	virtual void ResetTextureFromLastPosition(int xPos, int yPos, int objectWidth, int objectHeight, Level* level);
+	virtual void DrawExpression(const char* textToDraw, int xStartPosition, int yStartPosition, int size, int spaceBetweenLetters);
 
 private:
 	virtual void SetBitInfo();

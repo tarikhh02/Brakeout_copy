@@ -32,7 +32,7 @@ bool Game::ProcessBallCollisionsWithBricks()
 					bricksToDestroy--;
 
 					if (bricksToDestroy <= 0)
-						FinishGame("win");
+						FinishGame("YOU WON");
 					
 					break;
 				}
