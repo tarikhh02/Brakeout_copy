@@ -15,9 +15,9 @@ void Game::LoadNextLevel()
 			game->InitializeObjects();
 			game->AdaptGameForNewScreenSize(game->hWnd);
 			UI::DisplayStartHUD(game);
+			game->player.hasWon = false;
 			game->ResetBallAndPlayer();
 
-			game->player.hasWon = false;
 			game->hasNextLevelLoaded = true;
 		}, this).detach();
 }

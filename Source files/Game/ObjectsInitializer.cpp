@@ -59,8 +59,12 @@ void Game::InitializeObjects()
 		}
 	}
 
-	player = Player(150, 20, "Resources\\Images\\playerTexture.jpg");
-	ball = Ball(12, 12, "Resources\\Images\\ballTexture.jpg");
+	if (!player.isInitialized)
+	{
+		player = Player(150, 20, "Resources\\Images\\playerTexture.jpg");
+		ball = Ball(12, 12, "Resources\\Images\\ballTexture.jpg");
+		player.isInitialized = true;
+	}
 	
 	isInitializationFinished = true;
 	canAccessFunction = true;

@@ -10,6 +10,7 @@ public:
 	int livesNumber = 3;
 	bool hasWon = false;
 	bool isAlive = true;
+	bool isInitialized = false;
 	PhysicsVelocity physicsVelocity;
 
 public:

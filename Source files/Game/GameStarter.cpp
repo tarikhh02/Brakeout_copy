@@ -21,7 +21,7 @@ void Game::StartGame()
 			UI::ShowTextUI(scoreTxt.c_str(), 110, renderer->bufferHeight - 25, 200, 35, 3, UI::scoreUIPositionValues, 0x0f0f0f0f, renderer);
 		}, &renderer, &level, player.highScore).detach();
 
-	if (isGameFinished)
+	if (isGameFinished && player.highScore == 0)
 		player.livesNumber = 3;
 	isGameFinished = false;
 	player.isAlive = true;
