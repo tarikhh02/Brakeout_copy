@@ -14,7 +14,7 @@ void UI::DisplayStartHUD(Game* game)
 			
 			if(UI::scoreUIPositionValues[0] != 0)
 				renderer->ResetTextureFromLastPosition(110, renderer->bufferHeight - 25, UI::scoreUIPositionValues[0] + 10, UI::scoreUIPositionValues[1] + 10, &game->level);
-			UI::ShowTextUI("SCORE: 0", 110, renderer->bufferHeight - 25, 200, 35, 3, UI::scoreUIPositionValues, 0x0f0f0f0f, renderer); 
+			UI::ShowTextUI(scoreTxt.c_str(), 110, renderer->bufferHeight - 25, 200, 35, 3, UI::scoreUIPositionValues, 0x0f0f0f0f, renderer);
 		}, &game->renderer, game).detach();
 
 	std::thread([](Renderer* renderer, int level) 
