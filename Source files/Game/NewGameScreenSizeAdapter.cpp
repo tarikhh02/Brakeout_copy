@@ -1,4 +1,3 @@
-#include<thread>
 #include "Game.h"
 
 void Game::AdaptGameForNewScreenSize(HWND hWnd)
