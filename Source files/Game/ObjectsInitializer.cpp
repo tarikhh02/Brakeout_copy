@@ -43,6 +43,9 @@ void Game::InitializeObjects()
 																brickTypeNode.attribute("Texture").value(), brickTypeNode.attribute("BreakSound").value(),
 																brickTypeNode.attribute("HitSound").value(), atoi(brickTypeNode.attribute("BreakScore").value()));
 				}
+
+				if (bricks[y * level.columnCount + x].id != 'I')
+					bricksToDestroy++;
 			}
 			patternIndex++;
 		}
@@ -50,9 +53,7 @@ void Game::InitializeObjects()
 
 	player = Player(150, 20, "Resources\\Images\\playerTexture.jpg");
 	ball = Ball(12, 12, "Resources\\Images\\ballTexture.jpg");
-
-	bricksToDestroy = level.columnCount * level.rowCount;
-
+	
 	isInitializationFinished = true;
 	canAccessFunction = true;
 }

@@ -1,6 +1,6 @@
 #include "UI.h"
 
-const char* UI::characters[23] =
+const char* UI::characters[24] =
 {
 	//letters
 	"A@    @\n@    @\n@    @\n@@@@@@\n@    @\n@    @\n@@@@@@",

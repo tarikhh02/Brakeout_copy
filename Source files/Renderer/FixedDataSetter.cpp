@@ -4,12 +4,12 @@ void Renderer::SetUpFixedData(Level* level, BrickType* bricks)
 {
 	level->SetUpNewWidthAndHeight(bufferWidth, bufferHeight);
 
-	int newBrickWidth = (bufferWidth - level->coulmnSpacing) / 20;
+	int newBrickWidth = (bufferWidth - level->coulmnSpacing) / level->columnCount;
 	int newBrickHeight = bricks[0].height;
 
 	for (int y = 0; y < level->rowCount; y++)
 	{
-		int widthToAdd = bufferWidth - level->coulmnSpacing - newBrickWidth * 20;
+		int widthToAdd = bufferWidth - level->coulmnSpacing - newBrickWidth * level->columnCount;
 		int widthUpdateHolder = 0;
 		for (int x = 0; x < level->columnCount; x++)
 		{

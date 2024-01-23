@@ -24,6 +24,10 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 			if (textToDraw[i] == UI::characters[index][0])
 				break;
 		}
+
+		if (index >= 23)
+			index = 22;
+
 		for (int i = 1; i < strlen(UI::characters[index]); i++)
 		{
 			if (UI::characters[index][i] == '\n')
