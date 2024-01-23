@@ -4,33 +4,39 @@
 Collider::CollisionType Collider::HandleCollisions(ObjectBase* objectThatCollides, PhysicsVelocity* objectPhysicsVelocityComponent, ObjectBase* objectWithWhichCollidesWith)
 {
 	int offSet = 2;
+	int x = 1;
+	int y = 1;
 
-	for (int y = 1; y >= -1; y -= 2)
+	if (objectPhysicsVelocityComponent->xDirection < 0)
+		x = -1;
+
+	if (objectPhysicsVelocityComponent->yDirection < 0)
+		y = -1;
+
+	int ySideValue = objectThatCollides->yPos + y * (objectThatCollides->width / 2);
+
+	if (CheckAxis(objectThatCollides->xPos, ySideValue,
+		objectWithWhichCollidesWith->xPos - objectWithWhichCollidesWith->width / 2,
+		objectWithWhichCollidesWith->xPos + objectWithWhichCollidesWith->width / 2,
+		objectWithWhichCollidesWith->yPos - objectWithWhichCollidesWith->height / 2,
+		objectWithWhichCollidesWith->yPos + objectWithWhichCollidesWith->height / 2))
 	{
-		int xSideValue = objectThatCollides->xPos + y * (objectThatCollides->width / 2);
-		int ySideValue = objectThatCollides->yPos + y * (objectThatCollides->width / 2);
+		int yNewPos = objectWithWhichCollidesWith->yPos + (-1 * y * (objectWithWhichCollidesWith->height / 2 + objectThatCollides->height / 2 + offSet));
+		objectThatCollides->SetUpNewPosition(objectThatCollides->xPos, yNewPos);
+		return BASIC_COLLISION;
+	}
 
-		if (CheckAxis(xSideValue, objectThatCollides->yPos,
-			objectWithWhichCollidesWith->xPos - objectWithWhichCollidesWith->width / 2,
-			objectWithWhichCollidesWith->xPos + objectWithWhichCollidesWith->width / 2,
-			objectWithWhichCollidesWith->yPos - objectWithWhichCollidesWith->height / 2,
-			objectWithWhichCollidesWith->yPos + objectWithWhichCollidesWith->height / 2))
-		{
-			int xNewPos = objectWithWhichCollidesWith->xPos + (-1 * y * (objectWithWhichCollidesWith->width / 2 + objectThatCollides->width / 2 + offSet));
-			objectThatCollides->SetUpNewPosition(xNewPos, objectThatCollides->yPos);
-			return SIDE_COLLISION;
-		}
+	int xSideValue = objectThatCollides->xPos + x * (objectThatCollides->width / 2);
 
-		if (CheckAxis(objectThatCollides->xPos, ySideValue,
-			objectWithWhichCollidesWith->xPos - objectWithWhichCollidesWith->width / 2,
-			objectWithWhichCollidesWith->xPos + objectWithWhichCollidesWith->width / 2,
-			objectWithWhichCollidesWith->yPos - objectWithWhichCollidesWith->height / 2,
-			objectWithWhichCollidesWith->yPos + objectWithWhichCollidesWith->height / 2))
-		{
-			int yNewPos = objectWithWhichCollidesWith->yPos + (-1 * y * (objectWithWhichCollidesWith->height / 2 + objectThatCollides->height / 2 + offSet));
-			objectThatCollides->SetUpNewPosition(objectThatCollides->xPos, yNewPos);
-			return BASIC_COLLISION;
-		}
+	if (CheckAxis(xSideValue, objectThatCollides->yPos,
+		objectWithWhichCollidesWith->xPos - objectWithWhichCollidesWith->width / 2,
+		objectWithWhichCollidesWith->xPos + objectWithWhichCollidesWith->width / 2,
+		objectWithWhichCollidesWith->yPos - objectWithWhichCollidesWith->height / 2,
+		objectWithWhichCollidesWith->yPos + objectWithWhichCollidesWith->height / 2))
+	{
+		int xNewPos = objectWithWhichCollidesWith->xPos + (-1 * x * (objectWithWhichCollidesWith->width / 2 + objectThatCollides->width / 2 + offSet));
+		objectThatCollides->SetUpNewPosition(xNewPos, objectThatCollides->yPos);
+		return SIDE_COLLISION;
 	}
 
 	for (int y = 1; y >= -1; y -= 2)
