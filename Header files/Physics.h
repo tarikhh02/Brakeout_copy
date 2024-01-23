@@ -14,6 +14,5 @@ public:
 private:
 	static float* GetOppositeAngleDirection(float xDirection, float yDirection, Collider::CollisionType collisionType);
 	static float CalculateAngleModifier(float xDirection, float yDirection);
-	static void ApplyModifier(float& directionToModify, float modifyingValue);
 	static void CheckAndProcessStraightDirections(float& zeroValue, float zeroValueConstraint, float& oneValue, float oneValueConstraint);
 };

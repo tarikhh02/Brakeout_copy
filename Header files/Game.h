@@ -1,6 +1,5 @@
 #pragma once
 
-#include <mutex>
 #include "Renderer.h"
 #include "Player.h"
 #include "Physics.h"
