@@ -5,7 +5,7 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 	int lastXPos = object->xPos;
 	int lastYPos = object->yPos;
 
-	if(deltaTimeCounterValue > 0.0021)
+	if(deltaTimeCounterValue > 0.0025)
 	{
 		Physics::MoveObject(object, physicsVelocityComponent, deltaTimeCounterValue, renderer.bufferWidth, renderer.bufferHeight);
 
