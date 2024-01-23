@@ -24,7 +24,7 @@ public:
 		this->brickBreakScore = brickBreakScore;
 		hitPointsHolderValue = hitPoints;
 	}
-	~BrickType(){}
+	virtual ~BrickType(){}
 
 	void ObjectBase::ObjectInfo() {}
 };
