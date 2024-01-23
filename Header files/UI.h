@@ -19,5 +19,5 @@ public:
 		delete[] scoreUIPositionValues;
 	}
 
-	static void ShowTextUI(const char* textToDraw, int xPos, int yPos, int width, int letterSpacing, int* UIPositionValues, Renderer* renderer);
+	static void ShowTextUI(const char* textToDraw, int xPos, int yPos, int width, int height, int letterSpacing, int* UIPositionValues, Renderer* renderer);
 };

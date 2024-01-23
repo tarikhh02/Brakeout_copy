@@ -15,6 +15,6 @@ void Game::ResetBallAndPlayer()
 
 	std::thread([](Renderer* renderer) 
 		{ 
-			UI::ShowTextUI("PRESS SPACE TO START", renderer->bufferWidth / 2, 200, renderer->bufferWidth / 3, 3, UI::startUIPositionValues, renderer);
+			UI::ShowTextUI("PRESS SPACE TO START", renderer->bufferWidth / 2, 200, renderer->bufferWidth / 3, 35, 3, UI::startUIPositionValues, renderer);
 		}, &renderer).detach();
 }

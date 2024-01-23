@@ -1,7 +1,7 @@
 #include "Renderer.h"
 #include "UI.h"
 
-void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yStartPosition, int size, int spaceBetweencharacters)
+void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yStartPosition, int xSize, int ySize, int spaceBetweencharacters)
 {
 	unsigned int* pixels = (unsigned int*)bufferMemory;
 
@@ -13,7 +13,7 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 
 		if (textToDraw[i] == ' ')
 		{
-			x += (spaceBetweencharacters + 6 * size);
+			x += (spaceBetweencharacters + 6 * xSize);
 			continue;
 		}
 
@@ -32,21 +32,21 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 		{
 			if (UI::characters[index][i] == '\n')
 			{
-				y += size;
+				y += ySize;
 				x = xOrig;
 			}
 			else if (UI::characters[index][i] == ' ')
-				x += size;
+				x += xSize;
 			else
 			{
-				for (int ySize = y - size / 2; ySize <= y + size / 2; ySize++)
+				for (int yS = y - ySize / 2; yS <= y + ySize / 2; yS++)
 				{
-					for (int xSize = x - size / 2; xSize <= x + size / 2; xSize++)
+					for (int xS = x - xSize / 2; xS <= x + xSize / 2; xS++)
 					{
-						pixels[ySize * bufferWidth + xSize] = 0x0f0f0f0f;
+						pixels[yS * bufferWidth + xS] = 0x0f0f0f0f;
 					}
 				}
-				x += size;
+				x += xSize;
 			}
 		}
 		x += spaceBetweencharacters;

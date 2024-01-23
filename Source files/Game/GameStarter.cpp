@@ -4,12 +4,12 @@ void Game::StartGame()
 {
 	std::thread([](Renderer* renderer, Level* level) 
 		{
-			renderer->ResetTextureFromLastPosition(renderer->bufferWidth / 2, 190, UI::startUIPositionValues[0] + 50, UI::startUIPositionValues[1] + 50, level);
+			renderer->ResetTextureFromLastPosition(renderer->bufferWidth / 2, 200, UI::startUIPositionValues[0] + 10, UI::startUIPositionValues[1] + 10, level);
 		}, &renderer, &level).detach();
 
 	std::thread([](Renderer* renderer, Level* level)
 		{
-			renderer->ResetTextureFromLastPosition(renderer->bufferWidth / 2, renderer->bufferHeight - 200, UI::finishGameUIPositionValues[0] + 50, UI::finishGameUIPositionValues[1] + 50, level);
+			renderer->ResetTextureFromLastPosition(renderer->bufferWidth / 2, renderer->bufferHeight - 200, UI::finishGameUIPositionValues[0] + 10, UI::finishGameUIPositionValues[1] + 10, level);
 		}, &renderer, &level).detach();
 
 	//std::thread([](Renderer* renderer, Level* level)
