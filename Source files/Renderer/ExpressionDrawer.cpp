@@ -1,7 +1,7 @@
 #include "Renderer.h"
 #include "UI.h"
 
-void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yStartPosition, int xSize, int ySize, int spaceBetweencharacters)
+void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yStartPosition, int xSize, int ySize, int spaceBetweencharacters, unsigned int color)
 {
 	unsigned int* pixels = (unsigned int*)bufferMemory;
 
@@ -19,14 +19,14 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 
 		int index = 0;
 
-		for (index = 0; index < 23; index++)
+		for (index = 0; index < 25; index++)
 		{
 			if (textToDraw[i] == UI::characters[index][0])
 				break;
 		}
 
-		if (index >= 23)
-			index = 22;
+		if (index >= 25)
+			index = 24;
 
 		for (int i = 1; i < strlen(UI::characters[index]); i++)
 		{
@@ -43,7 +43,7 @@ void Renderer::DrawExpression(const char* textToDraw, int xStartPosition, int yS
 				{
 					for (int xS = x - xSize / 2; xS <= x + xSize / 2; xS++)
 					{
-						pixels[yS * bufferWidth + xS] = 0x0f0f0f0f;
+						pixels[yS * bufferWidth + xS] = color;
 					}
 				}
 				x += xSize;

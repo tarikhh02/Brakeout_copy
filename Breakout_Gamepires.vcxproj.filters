@@ -212,6 +212,9 @@
     <ClCompile Include="Source files\UI\TextShowingComponent.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Source files\UI\DisplayingHUD.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Ball.h">

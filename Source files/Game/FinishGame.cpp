@@ -10,7 +10,7 @@ void Game::FinishGame(const char* finishText)
 
 	std::thread([finishText](Renderer* renderer) 
 		{
-			UI::ShowTextUI(finishText, renderer->bufferWidth / 2, renderer->bufferHeight - 200, renderer->bufferWidth / 10, 35, 3, UI::finishGameUIPositionValues, renderer);
+			UI::ShowTextUI(finishText, renderer->bufferWidth / 2, renderer->bufferHeight - 200, renderer->bufferWidth / 10, 35, 3, UI::finishGameUIPositionValues, 0x0f0f0f0f, renderer);
 		}, &renderer).detach();
 
 	/*std::thread([](Renderer* renderer, int highScore)

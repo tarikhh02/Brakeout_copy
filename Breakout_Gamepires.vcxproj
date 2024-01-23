@@ -164,6 +164,7 @@
     <ClCompile Include="Source files\Renderer\SizeChangeProcessor.cpp" />
     <ClCompile Include="Source files\Renderer\TextureDrawer.cpp" />
     <ClCompile Include="Source files\Renderer\TextureFromLastPositionResetter.cpp" />
+    <ClCompile Include="Source files\UI\DisplayingHUD.cpp" />
     <ClCompile Include="Source files\UI\TextShowingComponent.cpp" />
     <ClCompile Include="Source files\UI\UIDataSetter.cpp" />
     <ClCompile Include="Source files\XMLDocumentLoader\XMLDocumentLoader.cpp" />

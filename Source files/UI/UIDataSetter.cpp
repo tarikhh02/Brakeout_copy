@@ -1,6 +1,6 @@
 #include "UI.h"
 
-const char* UI::characters[24] =
+const char* UI::characters[25] =
 {
 	//letters
 	"A@    @\n@    @\n@    @\n@@@@@@\n@    @\n@    @\n@@@@@@",
@@ -28,8 +28,12 @@ const char* UI::characters[24] =
 	"7 @    \n  @   \n   @  \n   @  \n     @\n     @\n@@@@@@",
 	"8@@@@@@\n@    @\n@    @\n@@@@@@\n@    @\n@    @\n@@@@@@",
 	"9@@@@@@\n     @\n     @\n@@@@@@\n@    @\n@    @\n@@@@@@",
+	"<  @@  \n @@@@ \n@@@@@@\n@@@@@@\n@@@@@@\n@@  @@\n @  @ "
 };
+
+const char* UI::playerLivesToTxt[3] = { "<", "<<" ,"<<<" };
 
 int* UI::startUIPositionValues = new int[2];
 int* UI::finishGameUIPositionValues = new int[2];
 int* UI::scoreUIPositionValues = new int[2];
+int* UI::heartsUIPositionValues = new int[2];
