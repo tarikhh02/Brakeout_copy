@@ -1,5 +1,4 @@
 #include <windows.h>
-#include <malloc.h>
 #include <thread>
 #include <chrono>
 #include "Game.h"
