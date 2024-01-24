@@ -10,10 +10,10 @@ void Game::ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physics
 		Physics::MoveObject(object, physicsVelocityComponent, deltaTimeCounterValue, renderer.bufferWidth, isPlayer);
 
 		renderer.ResetTextureFromLastPosition(lastXPos, lastYPos, object->width, object->height, &level);
-	}
 
-	if (!isPlayer)
-		ProcessCollisions();
+		if (!isPlayer)
+			ProcessCollisions();
+	}
 
 	if (!object->imageDecoded)
 				object->DecodeTexture();
