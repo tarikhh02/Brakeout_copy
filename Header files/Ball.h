@@ -12,7 +12,7 @@ public:
 	Ball(){}
 	Ball(int width, int height, const char* texturePath) : ObjectBase(width, height, texturePath)
 	{
-		physicsVelocity = PhysicsVelocity(0, 0, 1000);
+		physicsVelocity = PhysicsVelocity(0, 0, 1200);
 	}
 	virtual ~Ball(){}
 
