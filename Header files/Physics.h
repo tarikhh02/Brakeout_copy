@@ -7,7 +7,7 @@
 class Physics
 {
 public:
-	static void MoveObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, float deltaTime, int maxX, int maxY);
+	static void MoveObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, float deltaTime, int maxX, bool isPlayer);
 	static void SetUpDirectionAfterBasicContact(Collider::CollisionType collisionType, PhysicsVelocity* physicsVelocity, float directionModifier);
 	static void SetUpDirectionAfterCornerContact(PhysicsVelocity* physicsVelocity, float xCornerDirection, float yCornerDirection);
 
