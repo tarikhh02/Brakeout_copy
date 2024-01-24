@@ -6,12 +6,18 @@ void Game::ResetBallAndPlayer()
 	if (!isInitializationFinished)
 		return;
 
-	renderer.ResetTextureFromLastPosition(ball.xPos, ball.yPos, ball.width, ball.height, &level);
+	int x = ball.xPos;
+	int y = ball.yPos;
+
 	ball.SetUpNewPosition(renderer.bufferWidth / 2, renderer.bufferHeight / 2);
+	renderer.ResetTextureFromLastPosition(x, y, ball.width, ball.height, &level);
 	ball.physicsVelocity.SetDirection(0, 0);
 
-	renderer.ResetTextureFromLastPosition(player.xPos, player.yPos, player.width, player.height, &level);
+	x = player.xPos;
+	y = player.yPos;
+
 	player.SetUpNewPosition(renderer.bufferWidth / 2, player.height);
+	renderer.ResetTextureFromLastPosition(x, y, player.width, player.height, &level);
 	player.isAlive = false;
 
 	std::thread([](Renderer* renderer, bool hasPlayerWon) 
