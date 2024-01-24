@@ -20,9 +20,9 @@ void Physics::SetUpDirectionAfterBasicContact(Collider::CollisionType collisionT
 
 	if (collisionType == Collider::PLAYER_COLLISION)
 	{
-		CheckAndProcessStraightDirections(oppositeAngleValues[0], 0.1, oppositeAngleValues[1], 1);
+		CheckAndProcessStraightDirections(oppositeAngleValues[0], 0.1, oppositeAngleValues[1], 1, directionModifier);
 
-		CheckAndProcessStraightDirections(oppositeAngleValues[1], 0.2, oppositeAngleValues[0], 1);
+		CheckAndProcessStraightDirections(oppositeAngleValues[1], 0.2, oppositeAngleValues[0], 1, 1);
 	}
 
 	physicsVelocity->SetDirection(oppositeAngleValues[0], oppositeAngleValues[1]);

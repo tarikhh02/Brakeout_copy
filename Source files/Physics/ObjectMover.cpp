@@ -22,11 +22,6 @@ void Physics::MoveObject(ObjectBase* object, PhysicsVelocity* physicsVelocityCom
 			newXPos = maxX - object->width / 2;
 		else if (newXPos - object->width / 2 < 0)
 			newXPos = object->width / 2;
-
-		//if (newYPos + object->height / 2 > maxY)
-		//	newYPos = maxY - object->height / 2;
-		//else if (newYPos - object->height / 2 < 0)
-		//	newYPos = object->height / 2;
 	}
 
 	object->SetUpNewPosition(newXPos, newYPos);
