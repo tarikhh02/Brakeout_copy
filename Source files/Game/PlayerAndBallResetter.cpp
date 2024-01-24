@@ -1,22 +1,27 @@
 #include "Game.h"
 #include "UI.h"
+#include "Input.h"
 
 void Game::ResetBallAndPlayer()
 {
 	if (!isInitializationFinished)
 		return;
 
-	std::thread([](Game* game, int ballXPos, int ballYPos, int playerXPos, int playerYPos)
+	std::thread([](Game* game, int playerXPos, int playerYPos)
 		{
-			std::this_thread::sleep_for(std::chrono::milliseconds(50));
-			game->renderer.ResetTextureFromLastPosition(ballXPos, ballYPos, game->ball.width, game->ball.height, &game->level);
 			game->renderer.ResetTextureFromLastPosition(playerXPos, playerYPos, game->player.width, game->player.height, &game->level);
-		}, this, ball.xPos, ball.yPos, player.xPos, player.yPos).detach();
+		}, this, player.xPos, player.yPos).detach();
+
+	std::thread([](Game* game, int ballXPos, int ballYPos)
+		{
+			game->renderer.ResetTextureFromLastPosition(ballXPos, ballYPos, game->ball.width, game->ball.height, &game->level);
+		}, this, ball.xPos, ball.yPos).detach();
 
 	ball.SetUpNewPosition(renderer.bufferWidth / 2, renderer.bufferHeight / 2);
 	ball.physicsVelocity.SetDirection(0, 0);
 
 	player.SetUpNewPosition(renderer.bufferWidth / 2, player.height);
+	player.physicsVelocity.SetDirection(0, 0);
 	player.isAlive = false;
 
 	std::thread([](Renderer* renderer, bool hasPlayerWon) 

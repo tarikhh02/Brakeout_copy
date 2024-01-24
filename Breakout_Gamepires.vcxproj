@@ -143,6 +143,7 @@
     <ClCompile Include="Source files\Game\GameStarter.cpp" />
     <ClCompile Include="Source files\Game\MovableObjectsProcessor.cpp" />
     <ClCompile Include="Source files\Game\NewGameScreenSizeAdapter.cpp" />
+    <ClCompile Include="Source files\Game\NewScreenSizeAndUIAdaptingManager.cpp" />
     <ClCompile Include="Source files\Game\NextLevelLoader.cpp" />
     <ClCompile Include="Source files\Game\ObjectsInitializer.cpp" />
     <ClCompile Include="Source files\Game\PlayerAndBallResetter.cpp" />

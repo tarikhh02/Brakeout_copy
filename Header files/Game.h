@@ -47,6 +47,7 @@ public:
 	virtual void ResetBricks();
 	virtual void StartGame();
 	virtual void LoadNextLevel();
+	virtual void SetNewScreenSizeAndAdaptUI();
 
 private:
 	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer, float movementDeltaTimeHolder);

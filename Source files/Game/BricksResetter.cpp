@@ -3,6 +3,9 @@
 
 void Game::ResetBricks()
 {
+	if (!isInitializationFinished)
+		return;
+
 	for (int i = 0; i <= level.columnCount * level.rowCount; i++)
 	{
 		if (bricks[i].isDestroyed)
