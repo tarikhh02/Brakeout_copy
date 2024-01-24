@@ -2,7 +2,6 @@
 #include <thread>
 #include <chrono>
 #include "Game.h"
-#include "UI.h"
 #include "Input.h"
 
 Game game;
