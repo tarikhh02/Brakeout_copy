@@ -8,6 +8,9 @@ void Game::InitializeObjects()
 		return;
 	canAccessFunction = false;
 
+	if (currentLevel == 2)
+		currentLevel = 0;
+
 	std::string levelText = "Resources\\.xml files\\Level" + std::to_string(++currentLevel) + ".xml";
 
 	XMLDocumentLoader::LoadXMLFile(levelText.c_str());
