@@ -11,7 +11,6 @@ void Game::LoadNextLevel()
 
 			game->hasNextLevelLoaded = false;
 
-			std::this_thread::sleep_for(std::chrono::seconds(1));
 			game->InitializeObjects();
 			game->AdaptGameForNewScreenSize(game->hWnd);
 			UI::DisplayStartHUD(game);
