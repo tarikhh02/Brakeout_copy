@@ -21,10 +21,7 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	else if (uMsg == WM_SIZE)
 	{
-		std::thread([](Game* game) 
-			{ 
-				game->SetNewScreenSizeAndAdaptUI();
-			}, &game).detach();
+		game.SetNewScreenSizeAndAdaptUI();
 	}
 	
 	else if (uMsg == WM_CREATE)
