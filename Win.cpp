@@ -21,15 +21,14 @@ LRESULT WindowCallBack(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	else if (uMsg == WM_SIZE)
 	{
+		if(!game.isInitializationFinished)
+			game.InitializeObjects();
 		game.SetNewScreenSizeAndAdaptUI();
 	}
 	
 	else if (uMsg == WM_CREATE)
 	{
 		game.hWnd = hWnd;
-
-		//Initialize objects for the game
-		std::thread([]() { game.InitializeObjects(); }).detach();
 	}
 
 	else if (uMsg == WM_KEYDOWN || uMsg == WM_KEYUP)
