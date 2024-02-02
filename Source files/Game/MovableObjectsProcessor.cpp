@@ -7,9 +7,9 @@ void Game::ProcessMovableObjects()
 
 	movementDeltaTimeHolder += deltaTime;
 
-	ProcessEachMovableObject(&ball, &ball.physicsVelocity, false, movementDeltaTimeHolder);
+	ProcessEachMovableObject(&ball, false, movementDeltaTimeHolder);
 
-	ProcessEachMovableObject(&player, &player.physicsVelocity, true, movementDeltaTimeHolder);
+	ProcessEachMovableObject(&player, true, movementDeltaTimeHolder);
 
 	if (movementDeltaTimeHolder > 0.0025)
 		movementDeltaTimeHolder = 0;

@@ -3,7 +3,7 @@
 #include "ObjectBase.h"
 #include "PhysicsVelocity.h"
 
-class Player : public ObjectBase
+class MovableObject : public ObjectBase
 {
 public:
 	int highScore = 0;
@@ -14,12 +14,12 @@ public:
 	PhysicsVelocity physicsVelocity;
 
 public:
-	Player(){}
-	Player(int width, int height, const char* texturePath) : ObjectBase(width, height, texturePath)
+	MovableObject(){}
+	MovableObject(int width, int height, const char* texturePath) : ObjectBase(width, height, texturePath)
 	{
 		physicsVelocity = PhysicsVelocity(0, 0, 1200);
 	}
-	virtual ~Player(){}
+	virtual ~MovableObject(){}
 
 	void ObjectBase::ObjectInfo(){}
 };

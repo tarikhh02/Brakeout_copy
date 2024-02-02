@@ -36,17 +36,11 @@
     <Filter Include="Header Files\Game">
       <UniqueIdentifier>{92ee1451-3075-4b5f-b6fa-edbeae59e314}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Player">
-      <UniqueIdentifier>{6c72d825-2c93-4db0-b741-4bacb45f3f5e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\PhysicsVelocity">
       <UniqueIdentifier>{a9cfea8b-6bbc-477d-97c5-e5b6f92bf8d0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\PhysicsVelocity">
       <UniqueIdentifier>{f7f651ba-71fd-46a4-adc3-0d79bde4f393}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Ball">
-      <UniqueIdentifier>{dfdd542f-df3f-4ceb-ab77-420cc52099d9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Physics">
       <UniqueIdentifier>{14d193f3-ee20-44c1-b4c2-39e1eaaf84d5}</UniqueIdentifier>
@@ -101,6 +95,9 @@
     </Filter>
     <Filter Include="Header Files\UI">
       <UniqueIdentifier>{76c46886-ee0c-4124-942e-5f446cf0736e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MovableObject">
+      <UniqueIdentifier>{6c72d825-2c93-4db0-b741-4bacb45f3f5e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -223,9 +220,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header files\Ball.h">
-      <Filter>Header Files\Ball</Filter>
-    </ClInclude>
     <ClInclude Include="Header files\Game.h">
       <Filter>Header Files\Game</Filter>
     </ClInclude>
@@ -244,8 +238,8 @@
     <ClInclude Include="Header files\PhysicsVelocity.h">
       <Filter>Header Files\PhysicsVelocity</Filter>
     </ClInclude>
-    <ClInclude Include="Header files\Player.h">
-      <Filter>Header Files\Player</Filter>
+    <ClInclude Include="Header files\MovableObject.h">
+      <Filter>Header Files\MovableObject</Filter>
     </ClInclude>
     <ClInclude Include="Header files\Renderer.h">
       <Filter>Header Files\Renderer</Filter>

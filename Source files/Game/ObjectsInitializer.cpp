@@ -64,8 +64,8 @@ void Game::InitializeObjects()
 
 	if (!player.isInitialized)
 	{
-		player = Player(150, 20, "Resources\\Images\\playerTexture.jpg");
-		ball = Ball(12, 12, "Resources\\Images\\ballTexture.jpg");
+		player = MovableObject(150, 20, "Resources\\Images\\playerTexture.jpg");
+		ball = MovableObject(12, 12, "Resources\\Images\\ballTexture.jpg");
 		player.isInitialized = true;
 	}
 	

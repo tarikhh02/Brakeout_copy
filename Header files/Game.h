@@ -2,9 +2,8 @@
 
 #include <thread>
 #include "Renderer.h"
-#include "Player.h"
+#include "MovableObject.h"
 #include "Physics.h"
-#include "Ball.h"
 #include "XMLDocumentLoader.h"
 
 class Game
@@ -27,8 +26,8 @@ public:
 	Renderer renderer;
 	Level level;
 	BrickType* bricks = nullptr;
-	Player player;
-	Ball ball;
+	MovableObject player;
+	MovableObject ball;
 
 public:
 	~Game()
@@ -50,6 +49,6 @@ public:
 	virtual void SetNewScreenSizeAndAdaptUI();
 
 private:
-	virtual void ProcessEachMovableObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, bool isPlayer, float movementDeltaTimeHolder);
+	virtual void ProcessEachMovableObject(MovableObject* object, bool isPlayer, float movementDeltaTimeHolder);
 	virtual void ProcessCollisions();
 };

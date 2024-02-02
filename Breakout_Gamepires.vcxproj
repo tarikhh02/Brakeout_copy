@@ -174,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header files\Audio.h" />
-    <ClInclude Include="Header files\Ball.h" />
     <ClInclude Include="Header files\BrickType.h" />
     <ClInclude Include="Header files\Collider.h" />
     <ClInclude Include="Header files\Game.h" />
@@ -183,7 +182,7 @@
     <ClInclude Include="Header files\ObjectBase.h" />
     <ClInclude Include="Header files\Physics.h" />
     <ClInclude Include="Header files\PhysicsVelocity.h" />
-    <ClInclude Include="Header files\Player.h" />
+    <ClInclude Include="Header files\MovableObject.h" />
     <ClInclude Include="Header files\PUGIXML\pugiconfig.hpp" />
     <ClInclude Include="Header files\PUGIXML\pugixml.hpp" />
     <ClInclude Include="Header files\Renderer.h" />

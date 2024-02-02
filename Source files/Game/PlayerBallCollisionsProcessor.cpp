@@ -4,7 +4,7 @@ bool Game::ProcessBallCollisionsWithPlayer()
 {
 	Collider::CollisionType collisionType;
 
-	collisionType = Collider::HandleCollisions(&ball, &ball.physicsVelocity, &player);
+	collisionType = Collider::HandleCollisions(&ball, &player);
 
 	if (collisionType != Collider::NO_COLLISION)
 	{

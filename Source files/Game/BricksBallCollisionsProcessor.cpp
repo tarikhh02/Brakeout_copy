@@ -11,7 +11,7 @@ bool Game::ProcessBallCollisionsWithBricks()
 		if (bricks[i].id == '_' || bricks[i].isDestroyed)
 			continue;
 
-		collisionType = Collider::HandleCollisions(&ball, &ball.physicsVelocity, bricks + i);
+		collisionType = Collider::HandleCollisions(&ball, bricks + i);
 
 		if (collisionType == Collider::BASIC_COLLISION || collisionType == Collider::SIDE_COLLISION || collisionType == Collider::CORNER_COLLISION)
 		{

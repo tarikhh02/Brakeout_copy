@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ObjectBase.h"
+#include "MovableObject.h"
 #include "PhysicsVelocity.h"
 
 class Collider
@@ -17,7 +17,7 @@ public:
 	};
 
 public:
-	static CollisionType HandleCollisions(ObjectBase* objectThatCollides, PhysicsVelocity* objectPhysicsVelocityComponent, ObjectBase* objectWithWhichCollidesWith);
+	static CollisionType HandleCollisions(MovableObject* objectThatCollides, ObjectBase* objectWithWhichCollidesWith);
 	static CollisionType HandleWallCollisions(ObjectBase* objectThatCollides, int bufferWidth, int bufferHeight);
 
 private:

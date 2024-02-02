@@ -1,16 +1,16 @@
 #include "Collider.h"
 #include "Physics.h"
 
-Collider::CollisionType Collider::HandleCollisions(ObjectBase* objectThatCollides, PhysicsVelocity* objectPhysicsVelocityComponent, ObjectBase* objectWithWhichCollidesWith)
+Collider::CollisionType Collider::HandleCollisions(MovableObject* objectThatCollides, ObjectBase* objectWithWhichCollidesWith)
 {
 	int offSet = 2;
 	int x = 1;
 	int y = 1;
 
-	if (objectPhysicsVelocityComponent->xDirection < 0)
+	if (objectThatCollides->physicsVelocity.xDirection < 0)
 		x = -1;
 
-	if (objectPhysicsVelocityComponent->yDirection < 0)
+	if (objectThatCollides->physicsVelocity.yDirection < 0)
 		y = -1;
 
 	int ySideValue = objectThatCollides->yPos + y * (objectThatCollides->width / 2);
@@ -52,7 +52,7 @@ Collider::CollisionType Collider::HandleCollisions(ObjectBase* objectThatCollide
 				(objectWithWhichCollidesWith->yPos + (y * -1) * (objectWithWhichCollidesWith->height / 2) + (y * objectThatCollides->width / 2)),
 				(objectWithWhichCollidesWith->yPos + (y * -1) * (objectWithWhichCollidesWith->height / 2))))
 			{
-				Physics::SetUpDirectionAfterCornerContact(objectPhysicsVelocityComponent, -x, -y);
+				Physics::SetUpDirectionAfterCornerContact(&objectThatCollides->physicsVelocity, -x, -y);
 
 				int xNewPos = objectWithWhichCollidesWith->xPos + (x * -1) * (objectWithWhichCollidesWith->width / 2 + objectThatCollides->width / 2 + offSet);
 				int yNewPos = objectWithWhichCollidesWith->yPos + (y * -1) * (objectWithWhichCollidesWith->height / 2 + objectThatCollides->height / 2 + offSet);

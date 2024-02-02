@@ -1,17 +1,17 @@
 #include "Physics.h"
 
-void Physics::MoveObject(ObjectBase* object, PhysicsVelocity* physicsVelocityComponent, float deltaTime, int maxX, bool isPlayer)
+void Physics::MoveObject(MovableObject* object, float deltaTime, int maxX, bool isPlayer)
 {
 	int newXPos = object->xPos;
 	int newYPos = object->yPos;
 	
 	float directionModifierValue = 1;
 
-	if(physicsVelocityComponent->xDirection != 0 && physicsVelocityComponent->yDirection != 0)
-		directionModifierValue = CalculateAngleModifier(physicsVelocityComponent->xDirection, physicsVelocityComponent->yDirection);
+	if(object->physicsVelocity.xDirection != 0 && object->physicsVelocity.yDirection != 0)
+		directionModifierValue = CalculateAngleModifier(object->physicsVelocity.xDirection, object->physicsVelocity.yDirection);
 
-	float newXPosPrecentage = (physicsVelocityComponent->xDirection * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
-	float newYPosPrecentage = (physicsVelocityComponent->yDirection * directionModifierValue * physicsVelocityComponent->velocity) * deltaTime;
+	float newXPosPrecentage = (object->physicsVelocity.xDirection * directionModifierValue * object->physicsVelocity.velocity) * deltaTime;
+	float newYPosPrecentage = (object->physicsVelocity.yDirection * directionModifierValue * object->physicsVelocity.velocity) * deltaTime;
 
 	newXPos += (int)newXPosPrecentage;
 	newYPos += (int)newYPosPrecentage;
